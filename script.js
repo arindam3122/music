@@ -125,6 +125,12 @@ function loadSong(song) {
   audio.src = song.file;
   favCurrent.classList.toggle("active", favorites.some(fav => fav.title === song.title));
 }
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+  setTimeout(() => toast.classList.remove("show"), 2500);
+}
 
 function playSong() {
   audio.play();
@@ -207,8 +213,14 @@ muteBtn.addEventListener("click", () => {
 favCurrent.addEventListener("click", () => {
   const song = songs[currentSong];
   const index = favorites.findIndex(fav => fav.title === song.title);
-  if (index === -1) favorites.push(song);
-  else favorites.splice(index, 1);
+  if (index === -1) {
+  favorites.push(song);
+  showToast(`💖 "${song.title}" added to Favorites`);
+} else {
+  favorites.splice(index, 1);
+  showToast(`💔 "${song.title}" removed from Favorites`);
+}
+
   localStorage.setItem("favorites", JSON.stringify(favorites));
   favCurrent.classList.toggle("active", index === -1);
   updateCounts();
@@ -249,6 +261,7 @@ function toggleFavorite(song, btn) {
   else { favorites.splice(i, 1); btn.classList.remove("active"); }
   localStorage.setItem("favorites", JSON.stringify(favorites));
   updateCounts();
+  showToast(`${song.title} ${i === -1 ? "added to" : "removed from"} Favorites`);
 }
 
 /* ===== Search ===== */
