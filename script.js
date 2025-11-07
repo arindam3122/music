@@ -175,6 +175,7 @@ audio.addEventListener("timeupdate", e => {
   if (!duration) return;
   const percent = (currentTime / duration) * 100;
   progress.style.width = `${percent}%`;
+  document.querySelector(".progress-dot").style.right = `calc(${100 - percent}% - 7px)`;
   document.getElementById("currentTime").textContent = formatTime(currentTime);
   document.getElementById("timeLeft").textContent = "-" + formatTime(duration - currentTime);
 });

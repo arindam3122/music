@@ -1,292 +1,345 @@
-/* === General === */
-body {
+/* ===== Global Styles ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
-  background: linear-gradient(135deg, #0a001a, #21004b);
-  color: white;
+  padding: 0;
   font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
-/* === Layout === */
-.container {
+body {
+  background: linear-gradient(135deg, #1e1e2f, #3a3a55);
+  color: white;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 25px;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.05);
   padding: 20px;
-  flex-wrap: wrap;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  max-width: 1100px;
+  width: 95%;
+  height: 85vh;
 }
 
-/* === Player === */
+/* ===== Player Section ===== */
 .player {
-  background: rgba(20, 20, 20, 0.95);
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
-  width: 340px;
+  flex: 0 0 350px; /* fixed width for neat layout */
   text-align: center;
-  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Green glow when playing */
-.player.playing {
-  box-shadow: 0 0 25px rgba(0, 255, 153, 0.4),
-              0 0 50px rgba(0, 255, 153, 0.3);
-  animation: glowPulse 2.5s infinite ease-in-out;
-}
-
-/* Album Cover (static) */
 .cover {
   width: 100%;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  max-width: 260px;
+  border-radius: 20px;
+  margin: 0 auto 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Glow animation */
-@keyframes glowPulse {
-  0% {
-    box-shadow: 0 0 25px rgba(0, 255, 153, 0.4),
-                0 0 50px rgba(0, 255, 153, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 35px rgba(0, 255, 153, 0.7),
-                0 0 80px rgba(0, 255, 153, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 25px rgba(0, 255, 153, 0.4),
-                0 0 50px rgba(0, 255, 153, 0.3);
-  }
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
 }
-
-/* === Song Info === */
-#title {
-  margin: 6px 0;
-  font-size: 18px;
-  font-weight: 600;
-}
-#artist {
-  margin: 0;
+h4 {
+  font-weight: 400;
   color: #bbb;
+  margin-bottom: 10px;
 }
 
-/* === Progress Bar === */
-.progress-container {
-  position: relative;
-  width: 100%;
-  height: 7px;
-  background: #333;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 15px 0;
-  overflow: hidden;
-}
-
-.progress {
-  background: linear-gradient(90deg, #00ff99, #00ccff);
-  height: 100%;
-  width: 0%;
-  border-radius: 5px;
-  transition: width 0.1s linear;
-}
-
-/* === Controls === */
 .controls {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
-  margin-top: 15px;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .controls button {
-  width: 55px;
-  height: 55px;
+  border: none;
+  font-size: 1.8rem;
+  padding: 12px 15px;
   border-radius: 50%;
-  background: #1a1a1a;
-  border: 2px solid #00ff99;
-  color: #00ff99;
-  font-size: 22px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+}
+
+/* 🎵 Different colors for each button */
+#prev {
+  background: linear-gradient(135deg, #3b82f6, #2563eb); /* Blue */
+  color: white;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+}
+#play {
+  background: linear-gradient(135deg, #22c55e, #16a34a); /* Green */
+  color: white;
+  box-shadow: 0 4px 10px rgba(34, 197, 94, 0.4);
+}
+#next {
+  background: linear-gradient(135deg, #f97316, #ea580c); /* Orange */
+  color: white;
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.4);
 }
 
 .controls button:hover {
-  background: #00ff99;
-  color: #000;
-  transform: scale(1.1);
-  box-shadow: 0 0 12px rgba(0, 255, 153, 0.6);
+  transform: scale(1.15);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+.controls button:active {
+  transform: scale(1);
+  opacity: 0.85;
 }
 
-/* === Volume & Time === */
-.volume-control {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 15px;
+
+.progress-container {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  height: 6px;
+  width: 100%;
+  margin: 15px 0;
+  cursor: pointer;
+  position: relative;
+}
+.progress {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  position: relative;
+  transition: width 0.1s linear;
+}
+/* 🎯 Small draggable dot indicator */
+.progress-dot {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  background: #22c55e;
+  border: 2px solid white;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  pointer-events: none; /* let user drag anywhere on bar */
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
-.volume-control input {
-  width: 100px;
+/* Dot glows when music is playing */
+.player.playing .progress-dot {
+  box-shadow: 0 0 10px 3px rgba(34, 197, 94, 0.6);
 }
 
+/* While swiping (optional if you want animation feedback) */
+.progress-container:active .progress-dot {
+  transform: translate(50%, -50%) scale(1.2);
+}
 .time {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
-  opacity: 0.8;
-  margin-top: 10px;
+  font-size: 0.9rem;
 }
 
-/* === Favorites === */
+.volume-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.volume-control input {
+  width: 80px;
+}
+.volume-control button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 .heart-btn {
   background: none;
   border: none;
-  color: #fff;
-  font-size: 26px;
+  font-size: 1.5rem;
   cursor: pointer;
-  margin-top: 10px;
+  color: #bbb;
   transition: 0.3s;
 }
-.heart-btn.active {
-  color: #ff4d6d;
-  text-shadow: 0 0 10px rgba(255, 77, 109, 0.8);
+.heart-btn.active,
+.heart-btn:hover {
+  color: #ff4c60;
 }
 
-/* === Sidebar === */
+/* ===== Sidebar ===== */
 .sidebar {
-  background: rgba(20, 20, 20, 0.95);
-  padding: 20px;
-  border-radius: 20px;
-  width: 350px;
-  max-height: 80vh;
-  overflow-y: auto;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-  position: relative;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-/* === Search Bar (Glowing & Distinct) === */
 #search {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
   width: 100%;
-  padding: 12px 40px 12px 42px;
-  border: 2px solid transparent;
-  border-radius: 30px;
-  background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
-  color: white;
-  font-size: 16px;
-  margin-bottom: 18px;
-  outline: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 8px rgba(0, 255, 153, 0.2);
 }
 
-#search::placeholder {
-  color: #aaa;
-}
-
-#search:focus {
-  background: linear-gradient(135deg, #252525, #333);
-  border: 2px solid #00ff99;
-  box-shadow: 0 0 12px rgba(0, 255, 153, 0.5);
-}
-
-/* Add search icon */
-.sidebar::before {
-  content: "🔍";
-  position: absolute;
-  left: 28px;
-  top: 32px;
-  font-size: 16px;
-  color: #00ff99;
-  pointer-events: none;
-}
-
-/* === Tabs === */
 .tabs {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .tabs button {
   flex: 1;
-  margin: 0 4px;
-  padding: 6px 10px;
-  border-radius: 20px;
-  border: 1px solid #00ff99;
-  background: none;
+  margin: 3px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
   color: white;
   cursor: pointer;
   transition: 0.3s;
 }
 .tabs button.active {
-  background: #00ff99;
-  color: black;
-  font-weight: 600;
+  background: #ff4c60;
 }
 
-/* === Song List === */
 .song-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 5px;
 }
 .song-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: #222;
-  padding: 10px;
   margin-bottom: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   transition: 0.3s;
+  cursor: pointer;
 }
 .song-item:hover {
-  background: #2d2d2d;
+  background: rgba(255, 255, 255, 0.15);
 }
 .song-cover {
-  width: 45px;
-  height: 45px;
-  border-radius: 8px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
   margin-right: 10px;
+  object-fit: cover;
 }
 .song-details {
-  flex: 1;
-  overflow: hidden;
+  flex-grow: 1;
 }
 .song-title {
-  font-size: 15px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-weight: bold;
+  font-size: 0.95rem;
 }
 .song-artist {
-  font-size: 13px;
-  color: #aaa;
-}
-.song-item.active {
-  background: #333;
-  border: 1px solid #00ff99;
+  font-size: 0.8rem;
+  color: #bbb;
 }
 
-/* === Responsive (Mobile) === */
+/* ===== Scrollbar ===== */
+.song-list::-webkit-scrollbar {
+  width: 5px;
+}
+.song-list::-webkit-scrollbar-thumb {
+  background: #ff4c60;
+  border-radius: 5px;
+}
+
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    height: auto;
   }
-  .player, .sidebar {
-    width: 95%;
+
+  .player {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 20px;
   }
-  #search {
-    font-size: 15px;
-    padding: 10px 35px 10px 40px;
+
+  .sidebar {
+    width: 100%;
+    max-height: 400px;
   }
-  .sidebar::before {
-    left: 24px;
-    top: 30px;
+
+  .song-list {
+    max-height: 300px;
   }
+
+  .cover {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .player {
+    max-width: 320px;
+    padding: 15px;
+  }
+
+  .controls button {
+    font-size: 1.5rem;
+  }
+
+  .tabs button {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .volume-control input {
+    width: 60px;
+  }
+}
+/* ===== Glowing Effect When Music is Playing ===== */
+.player.playing {
+  box-shadow: 0 0 25px 5px rgba(34, 197, 94, 0.4),
+              0 0 50px 10px rgba(34, 197, 94, 0.2),
+              inset 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: box-shadow 0.5s ease-in-out, transform 0.3s ease;
+  transform: scale(1.02);
+}
+
+/* Optional: smooth pulse animation while playing */
+@keyframes pulseGlowGreen {
+  0%, 100% {
+    box-shadow: 0 0 25px 5px rgba(34, 197, 94, 0.4),
+                0 0 50px 10px rgba(34, 197, 94, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 35px 10px rgba(34, 197, 94, 0.6),
+                0 0 70px 15px rgba(34, 197, 94, 0.3);
+  }
+}
+
+.player.playing {
+  animation: pulseGlowGreen 2.5s infinite ease-in-out;
 }
