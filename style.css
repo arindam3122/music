@@ -104,38 +104,31 @@ h4 {
   opacity: 0.85;
 }
 
-
 .progress-container {
-  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 5px;
   height: 6px;
   width: 100%;
   margin: 15px 0;
   cursor: pointer;
-  position: relative;
+  overflow: hidden; /* important: clips inner elements cleanly */
 }
 .progress {
-  background: linear-gradient(90deg, #22c55e, #16a34a);
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  border-radius: 5px 0 0 5px;
   width: 0;
-  border-radius: 5px;
-  position: relative;
   transition: width 0.1s linear;
 }
 /* 🎯 Small draggable dot indicator */
 .progress-dot {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 14px;
-  height: 14px;
-  background: #22c55e;
-  border: 2px solid white;
-  border-radius: 50%;
-  transform: translate(50%, -50%);
-  pointer-events: none; /* let user drag anywhere on bar */
-  transition: background 0.2s ease, transform 0.1s ease;
+  transition: left 0.05s linear, transform 0.1s ease;
 }
+
 
 /* Dot glows when music is playing */
 .player.playing .progress-dot {

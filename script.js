@@ -164,10 +164,16 @@ function setProgress(e) {
   const width = rect.width;
   const duration = audio.duration;
   if (!duration) return;
+  
   const newTime = Math.max(0, Math.min((offsetX / width) * duration, duration));
   audio.currentTime = newTime;
-  progress.style.width = `${(newTime / duration) * 100}%`;
+
+  // Single unified bar and dot update
+  const percent = (newTime / duration) * 100;
+  progress.style.width = `${percent}%`;
+  document.querySelector(".progress-dot").style.left = `calc(${percent}% - 7px)`;
 }
+
 
 audio.addEventListener("timeupdate", e => {
   if (isDragging) return;
@@ -175,7 +181,7 @@ audio.addEventListener("timeupdate", e => {
   if (!duration) return;
   const percent = (currentTime / duration) * 100;
   progress.style.width = `${percent}%`;
-  document.querySelector(".progress-dot").style.right = `calc(${100 - percent}% - 7px)`;
+ document.querySelector(".progress-dot").style.left = `calc(${percent}% - 7px)`;
   document.getElementById("currentTime").textContent = formatTime(currentTime);
   document.getElementById("timeLeft").textContent = "-" + formatTime(duration - currentTime);
 });
