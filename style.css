@@ -1,0 +1,292 @@
+/* === General === */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0a001a, #21004b);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Layout === */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* === Player === */
+.player {
+  background: rgba(20, 20, 20, 0.95);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  width: 340px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+/* Green glow when playing */
+.player.playing {
+  box-shadow: 0 0 25px rgba(0, 255, 153, 0.4),
+              0 0 50px rgba(0, 255, 153, 0.3);
+  animation: glowPulse 2.5s infinite ease-in-out;
+}
+
+/* Album Cover (static) */
+.cover {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Glow animation */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 25px rgba(0, 255, 153, 0.4),
+                0 0 50px rgba(0, 255, 153, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 255, 153, 0.7),
+                0 0 80px rgba(0, 255, 153, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(0, 255, 153, 0.4),
+                0 0 50px rgba(0, 255, 153, 0.3);
+  }
+}
+
+/* === Song Info === */
+#title {
+  margin: 6px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+#artist {
+  margin: 0;
+  color: #bbb;
+}
+
+/* === Progress Bar === */
+.progress-container {
+  position: relative;
+  width: 100%;
+  height: 7px;
+  background: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.progress {
+  background: linear-gradient(90deg, #00ff99, #00ccff);
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.1s linear;
+}
+
+/* === Controls === */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.controls button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  border: 2px solid #00ff99;
+  color: #00ff99;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #00ff99;
+  color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.6);
+}
+
+/* === Volume & Time === */
+.volume-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.volume-control input {
+  width: 100px;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* === Favorites === */
+.heart-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.heart-btn.active {
+  color: #ff4d6d;
+  text-shadow: 0 0 10px rgba(255, 77, 109, 0.8);
+}
+
+/* === Sidebar === */
+.sidebar {
+  background: rgba(20, 20, 20, 0.95);
+  padding: 20px;
+  border-radius: 20px;
+  width: 350px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  position: relative;
+}
+
+/* === Search Bar (Glowing & Distinct) === */
+#search {
+  width: 100%;
+  padding: 12px 40px 12px 42px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+  color: white;
+  font-size: 16px;
+  margin-bottom: 18px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 153, 0.2);
+}
+
+#search::placeholder {
+  color: #aaa;
+}
+
+#search:focus {
+  background: linear-gradient(135deg, #252525, #333);
+  border: 2px solid #00ff99;
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.5);
+}
+
+/* Add search icon */
+.sidebar::before {
+  content: "🔍";
+  position: absolute;
+  left: 28px;
+  top: 32px;
+  font-size: 16px;
+  color: #00ff99;
+  pointer-events: none;
+}
+
+/* === Tabs === */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.tabs button {
+  flex: 1;
+  margin: 0 4px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: 1px solid #00ff99;
+  background: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tabs button.active {
+  background: #00ff99;
+  color: black;
+  font-weight: 600;
+}
+
+/* === Song List === */
+.song-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.song-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #222;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.song-item:hover {
+  background: #2d2d2d;
+}
+.song-cover {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+.song-details {
+  flex: 1;
+  overflow: hidden;
+}
+.song-title {
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.song-artist {
+  font-size: 13px;
+  color: #aaa;
+}
+.song-item.active {
+  background: #333;
+  border: 1px solid #00ff99;
+}
+
+/* === Responsive (Mobile) === */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .player, .sidebar {
+    width: 95%;
+  }
+  #search {
+    font-size: 15px;
+    padding: 10px 35px 10px 40px;
+  }
+  .sidebar::before {
+    left: 24px;
+    top: 30px;
+  }
+}

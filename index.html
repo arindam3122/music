@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="player">
+      <img id="cover" src="cover.jpg" alt="Album Cover" class="cover" />
+      <h2 id="title">Song Title</h2>
+      <h4 id="artist">Artist Name</h4>
+
+      <div class="progress-container">
+        <div id="progress" class="progress"></div>
+      </div>
+
+      <div class="controls">
+        <button id="prev" title="Previous">⏮</button>
+        <button id="play" title="Play / Pause">▶️</button>
+        <button id="next" title="Next">⏭</button>
+      </div>
+
+      <div class="time">
+        <span id="currentTime">0:00</span>
+        <span id="timeLeft">-0:00</span>
+      </div>
+
+      <div class="volume-control">
+        <button id="mute">🔊</button>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+        <span id="volumeValue">100%</span>
+      </div>
+
+      <button id="favCurrent" class="heart-btn">❤</button>
+    </section>
+
+    <aside class="sidebar">
+      <input type="text" id="search" placeholder="Search songs..." />
+      <div class="tabs">
+        <button id="allSongsTab" class="active">All Songs <span id="allCount">0</span></button>
+        <button id="favSongsTab">Favorites <span id="favCount">0</span></button>
+      </div>
+      <ul id="songList" class="song-list"></ul>
+    </aside>
+  </main>
+
+  <audio id="audio"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
