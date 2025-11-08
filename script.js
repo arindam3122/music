@@ -88,6 +88,10 @@ const songs = [
   { title: "Thik Jeno Love Story", artist: "Arindom, Prashmita", file: "music/Thik Jeno Love Story (Title Song) - Arindom, Prashmita Full HD Audio Song with Lyrics Star Jalsha.mp3", cover: "https://c.saavncdn.com/985/Thik-Jeno-Love-Story-Bengali-2014-20230912071433-500x500.jpg" },
   { title: "Tumi Aashe Paashe (তুমি আশে পাশে )", artist: " Parbona Ami Chartey Tokey | Bonny | Koushani ", file: "music/Tumi Aashe Paashe (তম আশ পশ )  Parbona Ami Chartey Tokey  Bonny  Koushani  SVF Music.mp3", cover: "https://i.ytimg.com/vi/bnFiJ_e_dEg/sddefault.jpg" },
   { title: "Aami Tomar Kache (আমি তোমার কাছে)", artist: "Yoddha | Dev | Mimi | Arijit Singh | Prasen", file: "music/Aami Tomar Kache (আম তমর কছ)  Lyrical  Yoddha  Dev  Mimi  Arijit Singh  Prasen SVF Music.mp3", cover: "https://i.ytimg.com/vi/u_4BBFxp7Rs/maxresdefault.jpg" },
+  { title: "Emotional Saiyaan", artist: "Shudhu Tomari Jonyo | Dev | Mimi | Arijit | Shalmali | Arindom", file: "music/Emotional Saiyaan  Shudhu Tomari Jonyo  Dev  Mimi  Arijit   Shalmali  Arindom.mp3", cover: "https://i.ytimg.com/vi/YBU97Lb6jHw/maxresdefault.jpg" },
+  { title: "Bojhabo Ki Kore", artist: "Haripada Bandwala | Ankush | Nusrat | Arijit | Anwesshaa | Indraadip", file: "music/Bojhabo Ki Kore  Haripada Bandwala  Ankush  Nusrat  Arijit  Anwesshaa  Indraadip  SVF Music.mp3", cover: "https://i.ytimg.com/vi/CP2AYEqoaZo/maxresdefault.jpg" },
+  { title: "Jodi Bolo (যদি বলো)", artist: "One Movie Song | Yash | Nusrat | Birsa Dasgupta | Arijit Singh | Arindom", file: "music/Jodi Bolo (যদ বল)  One Movie Song  Yash  Nusrat  Birsa Dasgupta  Arijit Singh  Arindom  SVF.mp3", cover: "https://i.ytimg.com/vi/jKMZZX2YMg0/sddefault.jpg" },
+  { title: "", artist: "", file: "music/.mp3", cover: "" },
   { title: "", artist: "", file: "music/.mp3", cover: "" },
 
 ];
