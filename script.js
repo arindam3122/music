@@ -98,6 +98,7 @@ let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 let currentList = "all";
 
 const audio = document.getElementById("audio");
+audio.preload = "metadata"; // only load info, not full audio
 const title = document.getElementById("title");
 const artist = document.getElementById("artist");
 const cover = document.getElementById("cover");
@@ -233,14 +234,15 @@ function createPlaylist(list) {
   list.forEach(song => {
     const li = document.createElement("li");
     li.classList.add("song-item");
-    li.innerHTML = `
-      <img src="${song.cover}" class="song-cover" />
-      <div class="song-details">
-        <p class="song-title">${song.title}</p>
-        <p class="song-artist">${song.artist}</p>
-      </div>
-      <button class="heart-btn ${favorites.some(f => f.title === song.title) ? "active" : ""}">❤</button>
-    `;
+   li.innerHTML = `
+  <img data-src="${song.cover}" src="placeholder.jpg" class="song-cover lazy" />
+  <div class="song-details">
+    <p class="song-title">${song.title}</p>
+    <p class="song-artist">${song.artist}</p>
+  </div>
+  <button class="heart-btn ${favorites.some(f => f.title === song.title) ? "active" : ""}">❤</button>
+`;
+
     li.querySelector(".heart-btn").addEventListener("click", e => {
       e.stopPropagation();
       toggleFavorite(song, e.target);
@@ -252,6 +254,8 @@ function createPlaylist(list) {
       playSong();
     });
     songList.appendChild(li);
+    initLazyLoading();
+
   });
 }
 
@@ -293,8 +297,25 @@ function updateCounts() {
   allCount.textContent = songs.length;
   favCount.textContent = favorites.length;
 }
+/* ===== Lazy Loading for Images ===== */
+function initLazyLoading() {
+  const lazyImages = document.querySelectorAll('img.lazy');
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;  // load actual image
+        img.classList.remove('lazy');
+        obs.unobserve(img);
+      }
+    });
+  }, { rootMargin: "200px" }); // loads 200px before entering viewport
+
+  lazyImages.forEach(img => observer.observe(img));
+}
 
 /* ===== Init ===== */
 updateCounts();
 loadSong(songs[currentSong]);
 createPlaylist(songs);
+initLazyLoading(); // initialize lazy image loading

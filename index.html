@@ -48,7 +48,9 @@
     </aside>
   </main>
   <div id="toast" class="toast"></div>
-  <audio id="audio"></audio>
+  <!-- Audio won't preload full files (saves mobile data) -->
+<audio id="audio" preload="none"></audio>
+
   <script src="script.js"></script>
 </body>
 </html>
