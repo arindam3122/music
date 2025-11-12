@@ -97,6 +97,10 @@ const songs = [
   { title: "Poran Jai Jolia Re (পরাণ যায় জ্বলিয়া রে)", artist: "Dev | Subhashree | Jeet Gannguli ", file: "music/Poran Jai Jolia Re (পরণ যয় জবলয় র)  Title Track  Dev  Subhashree  Jeet Gannguli  SVF.mp3", cover: "https://i.ytimg.com/vi/Mktl_fwILpg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDsFRBGxmq4rRrY3a7xQkfmwNpZlg" },
   { title: "Sharatadin", artist: " Yoddha | Dev | Mimi | Arijit | Anwesshaa | Indraadip | Raj Chakraborty", file: "music/Sharatadin  Yoddha  Dev  Mimi  Arijit  Anwesshaa  Indraadip  Raj Chakraborty  SVF.mp3", cover: "https://i.ytimg.com/vi/DbXP1TqLwrs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDYabi78evIMxvYOnItxqlGK56hkw" },
   { title: "Joy Kali (জয় কালী)", artist: "Raghu Dakat | Dev | Rathijit, Ishan, Shreya | Dhrubo B ", file: "music/Joy Kali (জয় কল) - Lyrical  Raghu Dakat  Dev  Rathijit, Ishan, Shreya  Dhrubo B  SVF Music.mp3", cover: "https://i.ytimg.com/vi/sdHa9xsvWts/maxresdefault.jpg" },
+  { title: "Mon Bojhe Naa (মন বোঝে না)", artist: "Chirodini Tumi Je Amar 2 | Arjun | Arijit Singh | Jeet G ", file: "music/Mon Bojhe Naa (মন বঝ ন)  Chirodini Tumi Je Amar 2  Arjun  Arijit Singh  Jeet G  SVF Music.mp3", cover: "https://i.ytimg.com/vi/6SkQ-srIJVM/hqdefault.jpg" },
+  { title: "", artist: "", file: "music/.mp3", cover: "" },
+  { title: "", artist: "", file: "music/.mp3", cover: "" },
+  { title: "", artist: "", file: "music/.mp3", cover: "" },
   { title: "", artist: "", file: "music/.mp3", cover: "" },
   { title: "", artist: "", file: "music/.mp3", cover: "" },
 

@@ -357,3 +357,41 @@ h4 {
   opacity: 1;
   transform: translateY(0);
 }
+/* === Song Title === */
+#title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #ff6b6b, #f8e71c, #50c9c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  animation: gradientShift 5s ease infinite;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* === Artist Line === */
+#artist {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #9ea7ff;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  text-shadow: 0 0 8px rgba(158, 167, 255, 0.5);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover effect (optional but cool) */
+#artist:hover {
+  color: #b5c7ff;
+  text-shadow: 0 0 12px rgba(181, 199, 255, 0.8);
+}
+
+/* === Animated gradient effect for the title === */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
