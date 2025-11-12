@@ -139,7 +139,18 @@ function loadSong(song) {
   cover.src = song.cover;
   audio.src = song.file;
   favCurrent.classList.toggle("active", favorites.some(fav => fav.title === song.title));
+
+  // Highlight the active song in the list
+  document.querySelectorAll(".song-item").forEach(item => {
+    item.classList.remove("active");
+    const songTitle = item.querySelector(".song-title").textContent;
+    if (songTitle === song.title) {
+      item.classList.add("active");
+      item.scrollIntoView({ behavior: "smooth", block: "nearest" }); // optional: auto-scroll into view
+    }
+  });
 }
+
 function showToast(message) {
   const toast = document.getElementById("toast");
   toast.textContent = message;

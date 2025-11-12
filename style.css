@@ -395,3 +395,16 @@ h4 {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
+/* Highlight currently playing song */
+.song-item.active {
+  background: linear-gradient(90deg, #3e71f341, #50c9c344);
+  border-left: 4px solid #50c9c3;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(80, 201, 195, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.song-item.active .song-title {
+  color: #50c9c3;
+  font-weight: 700;
+}
