@@ -99,8 +99,7 @@ const songs = [
   { title: "Joy Kali (জয় কালী)", artist: "Raghu Dakat | Dev | Rathijit, Ishan, Shreya | Dhrubo B ", file: "music/Joy Kali (জয় কল) - Lyrical  Raghu Dakat  Dev  Rathijit, Ishan, Shreya  Dhrubo B  SVF Music.mp3", cover: "https://i.ytimg.com/vi/sdHa9xsvWts/maxresdefault.jpg" },
   { title: "Mon Bojhe Naa (মন বোঝে না)", artist: "Chirodini Tumi Je Amar 2 | Arjun | Arijit Singh | Jeet G ", file: "music/Mon Bojhe Naa (মন বঝ ন)  Chirodini Tumi Je Amar 2  Arjun  Arijit Singh  Jeet G  SVF Music.mp3", cover: "https://i.ytimg.com/vi/6SkQ-srIJVM/hqdefault.jpg" },
   { title: "Sahiba", artist: "", file: "music/Sahiba Lyrics - Aditya Rikhari  saahiba, aaye ghar kaahe na.mp3", cover: "https://i.ytimg.com/vi/dJQS-9dYU-M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCUbhxiYfpR_6amR1EWUKYl2x7yWw" },
-  { title: "", artist: "", file: "music/.mp3", cover: "" },
-  { title: "", artist: "", file: "music/.mp3", cover: "" },
+  { title: "O Lolona(ও ললনা)", artist: "Parbona Ami Chharte Toke | Bonny, Koushani | Benny D", file: "music/O Lolona(ও ললন) Full Video Song Parbona Ami Chharte Toke  Bony, Koushani  Benny D SVFMusic.mp3", cover: "https://c.saavncdn.com/285/Parbona-Ami-Charte-Toke-Original-Motion-Picture-Soundtrack-Bengali-2015-20250408014818-500x500.jpg" },
   { title: "", artist: "", file: "music/.mp3", cover: "" },
   { title: "", artist: "", file: "music/.mp3", cover: "" },
 
