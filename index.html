@@ -595,6 +595,7 @@
       font-weight: 500;
     }
 
+    /* Modal Styling */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -621,7 +622,7 @@
       background: #ffffff;
       border: 1px solid var(--card-border);
       width: 90%;
-      max-width: 340px;
+      max-width: 360px;
       border-radius: 20px;
       padding: 20px;
       display: flex;
@@ -634,6 +635,12 @@
       font-size: 1.1rem;
       font-weight: 800;
       color: #0f172a;
+    }
+
+    .modal-desc {
+      font-size: 0.88rem;
+      color: var(--text-sub);
+      line-height: 1.4;
     }
 
     .modal-list {
@@ -657,6 +664,43 @@
     .modal-item:hover {
       border-color: var(--spotify-green);
       background: #ffffff;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      margin-top: 4px;
+    }
+
+    .modal-btn {
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .modal-btn-cancel {
+      background: var(--input-bg);
+      border: 1px solid var(--input-border);
+      color: var(--text-main);
+    }
+
+    .modal-btn-cancel:hover {
+      background: #e2e8f0;
+    }
+
+    .modal-btn-confirm {
+      background: #ef4444;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(239, 68, 68, 0.25);
+    }
+
+    .modal-btn-confirm:hover {
+      background: #dc2626;
     }
 
     .modal-close {
@@ -847,11 +891,26 @@
     </div>
   </div>
 
+  <!-- Add to Playlist Modal -->
   <div class="modal-overlay" id="playlist-modal">
     <div class="modal-card">
       <div class="modal-title">Add to Playlist</div>
       <div class="modal-list" id="modal-playlist-list"></div>
       <button class="modal-close" id="modal-close-btn">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div class="modal-overlay" id="delete-confirm-modal">
+    <div class="modal-card">
+      <div class="modal-title">Confirm Delete</div>
+      <div class="modal-desc" id="delete-modal-desc">
+        Are you sure you want to delete this?
+      </div>
+      <div class="modal-actions">
+        <button class="modal-btn modal-btn-cancel" id="cancel-delete-btn">Cancel</button>
+        <button class="modal-btn modal-btn-confirm" id="confirm-delete-btn">Delete</button>
+      </div>
     </div>
   </div>
 
@@ -871,7 +930,7 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js').then(() => {
-          console.log('Service Worker Registered Successfully for Offline Mode');
+          console.log('Service Worker Registered Successfully');
         }).catch((err) => {
           console.error('Service Worker Registration Failed:', err);
         });
@@ -914,8 +973,14 @@
     const modalPlaylistList = document.getElementById('modal-playlist-list');
     const modalCloseBtn = document.getElementById('modal-close-btn');
 
+    // Delete Modal Elements
+    const deleteConfirmModal = document.getElementById('delete-confirm-modal');
+    const deleteModalDesc = document.getElementById('delete-modal-desc');
+    const cancelDeleteBtn = document.getElementById('cancel-delete-btn');
+    const confirmDeleteBtn = document.getElementById('confirm-delete-btn');
+
     let currentSongIndex = 0;
-    let selectedSongForModal = null;
+    let pendingDeleteAction = null; // Stores deletion target callback
     let lastVolume = 0.8;
     let toastTimeout = null;
     let renderDebounceTimer = null;
@@ -1091,14 +1156,45 @@
       renderPlaylist();
     });
 
+    // Confirmation Modal Helper
+    function openConfirmModal(descriptionText, onConfirmCallback) {
+      deleteModalDesc.textContent = descriptionText;
+      pendingDeleteAction = onConfirmCallback;
+      deleteConfirmModal.classList.add('open');
+    }
+
+    function closeConfirmModal() {
+      deleteConfirmModal.classList.remove('open');
+      pendingDeleteAction = null;
+    }
+
+    // Delete Playlist Button Click
     deletePlaylistBtn.addEventListener('click', () => {
       const current = playlistSelect.value;
       if (customPlaylists[current]) {
-        delete customPlaylists[current];
-        showToast("🗑️", `Deleted playlist "${current}"`);
-        playlistSelect.value = 'all';
-        renderPlaylistOptions();
-        renderPlaylist();
+        openConfirmModal(`Are you sure you want to delete the playlist "${current}"?`, () => {
+          delete customPlaylists[current];
+          showToast("🗑️", `Deleted playlist "${current}"`);
+          playlistSelect.value = 'all';
+          renderPlaylistOptions();
+          renderPlaylist();
+        });
+      }
+    });
+
+    // Cancel & Confirm Modal Actions
+    cancelDeleteBtn.addEventListener('click', closeConfirmModal);
+
+    confirmDeleteBtn.addEventListener('click', () => {
+      if (typeof pendingDeleteAction === 'function') {
+        pendingDeleteAction();
+      }
+      closeConfirmModal();
+    });
+
+    deleteConfirmModal.addEventListener('click', (e) => {
+      if (e.target === deleteConfirmModal) {
+        closeConfirmModal();
       }
     });
 
@@ -1226,7 +1322,7 @@
           </div>
           <div class="item-actions">
             ${isCustomView 
-              ? `<button class="item-btn remove-from-playlist-btn" data-remove-id="${song.id}" title="Remove from playlist">🗑️</button>` 
+              ? `<button class="item-btn remove-from-playlist-btn" data-remove-id="${song.id}" title="Remove song from playlist">🗑️</button>` 
               : `<button class="item-btn add-to-playlist-btn" data-add-id="${song.id}" title="Add to custom playlist">➕</button>`
             }
             <button class="item-btn item-like-btn ${song.isLiked ? 'liked' : ''}" data-like-id="${song.id}">♥</button>
@@ -1252,9 +1348,14 @@
         e.stopPropagation();
         const songId = parseInt(removeBtn.dataset.removeId);
         const currentP = playlistSelect.value;
-        customPlaylists[currentP] = customPlaylists[currentP].filter(id => id !== songId);
-        showToast("🗑️", "Removed from playlist");
-        renderPlaylist();
+        const song = songs.find(s => s.id === songId);
+        const songTitle = song ? song.title : 'this song';
+
+        openConfirmModal(`Remove "${songTitle}" from playlist "${currentP}"?`, () => {
+          customPlaylists[currentP] = customPlaylists[currentP].filter(id => id !== songId);
+          showToast("🗑️", "Removed from playlist");
+          renderPlaylist();
+        });
         return;
       }
 
@@ -1274,7 +1375,6 @@
     });
 
     function openAddToPlaylistModal(songId) {
-      selectedSongForModal = songId;
       const keys = Object.keys(customPlaylists);
       modalPlaylistList.innerHTML = '';
 
@@ -1307,6 +1407,12 @@
     }
 
     modalCloseBtn.addEventListener('click', closeModal);
+
+    playlistModal.addEventListener('click', (e) => {
+      if (e.target === playlistModal) {
+        closeModal();
+      }
+    });
 
     function highlightPlaylistItem() {
       const items = playlistEl.querySelectorAll('.playlist-item');
