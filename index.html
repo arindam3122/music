@@ -46,7 +46,6 @@
       position: relative;
     }
 
-    /* Ambient Soft Glow Effect */
     body::before {
       content: "";
       position: fixed;
@@ -59,7 +58,6 @@
       z-index: 0;
     }
 
-    /* Site Header Title & Network Badge */
     .brand-header {
       display: flex;
       align-items: center;
@@ -83,7 +81,6 @@
       color: #0f172a;
     }
 
-    /* Online / Offline Status Badge */
     .network-badge {
       display: inline-flex;
       align-items: center;
@@ -125,7 +122,6 @@
       box-shadow: 0 0 6px #dc2626;
     }
 
-    /* App Layout Container */
     .app-container {
       width: 100%;
       max-width: 960px;
@@ -137,7 +133,6 @@
       z-index: 1;
     }
 
-    /* Player Card Panel */
     .player-card {
       position: sticky;
       top: 20px;
@@ -155,7 +150,6 @@
       overflow: hidden;
     }
 
-    /* Album Cover Section */
     .cover-container {
       position: relative;
       width: 100%;
@@ -198,7 +192,6 @@
       border-color: #fca5a5;
     }
 
-    /* Track Metadata */
     .track-info {
       width: 100%;
       overflow: hidden;
@@ -228,7 +221,6 @@
       text-overflow: ellipsis;
     }
 
-    /* Progress Slider */
     .progress-container {
       display: flex;
       flex-direction: column;
@@ -272,7 +264,6 @@
       color: var(--text-sub);
     }
 
-    /* Controls Section */
     .controls {
       display: flex;
       justify-content: center;
@@ -314,7 +305,6 @@
       transform: scale(1.05);
     }
 
-    /* Volume Container */
     .volume-container {
       display: flex;
       align-items: center;
@@ -338,7 +328,6 @@
       flex-shrink: 0;
     }
 
-    /* Playlist Section Panel */
     .playlist-wrapper {
       background-color: var(--card-bg);
       backdrop-filter: blur(16px);
@@ -353,7 +342,6 @@
       overflow: hidden;
     }
 
-    /* Input & Control Box */
     .create-playlist-box {
       display: flex;
       gap: 8px;
@@ -393,7 +381,6 @@
       flex: 1;
     }
 
-    /* + New Playlist Dynamic State */
     .create-btn {
       background: var(--spotify-green);
       color: #ffffff;
@@ -471,7 +458,6 @@
       flex-shrink: 0;
     }
 
-    /* Playlist Items List */
     .playlist {
       display: flex;
       flex-direction: column;
@@ -609,7 +595,6 @@
       font-weight: 500;
     }
 
-    /* Modal Context Menu */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -684,7 +669,6 @@
       font-weight: 600;
     }
 
-    /* TOP-RIGHT Vibrant Toast Alert Box */
     .toast-container {
       position: fixed;
       top: 20px;
@@ -717,7 +701,6 @@
       transform: translateX(0);
     }
 
-    /* Mobile Responsive Breakpoint */
     @media (max-width: 768px) {
       body {
         padding: 12px 8px;
@@ -758,7 +741,6 @@
 </head>
 <body>
 
-  <!-- Brand Header -->
   <header class="brand-header">
     <svg width="42" height="42" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -789,7 +771,6 @@
     </svg>
     <h1>MY MUSIC</h1>
     
-    <!-- Online/Offline Status Indicator -->
     <div id="network-badge" class="network-badge online">
       <span class="status-dot"></span>
       <span id="network-text">Online</span>
@@ -797,7 +778,6 @@
   </header>
 
   <div class="app-container">
-    <!-- Player Card Panel -->
     <div class="player-card" id="player-card">
       <div class="cover-container">
         <img id="cover-img" class="cover-img" src="" alt="Album Cover" />
@@ -831,7 +811,6 @@
         </button>
       </div>
 
-      <!-- Volume Bar -->
       <div class="volume-container">
         <span class="volume-icon" id="mute-btn">🔈</span>
         <input type="range" id="volume" class="range-slider" min="0" max="1" step="0.05" value="0.8" />
@@ -840,16 +819,12 @@
       </div>
     </div>
 
-    <!-- Playlist Section -->
     <div class="playlist-wrapper">
-      
-      <!-- Create Playlist Bar -->
       <div class="create-playlist-box">
         <input type="text" id="new-playlist-name" class="playlist-input" placeholder="Create playlist name..." />
         <button id="create-playlist-btn" class="create-btn" disabled>＋ New Playlist</button>
       </div>
 
-      <!-- View Playlist Selector -->
       <div class="playlist-selector-bar">
         <select id="playlist-select" class="playlist-select">
           <option value="all">🎵 All Songs</option>
@@ -858,7 +833,6 @@
         <button id="delete-playlist-btn" class="delete-playlist-btn">🗑️ Delete</button>
       </div>
 
-      <!-- Search & Sort Filter Bar -->
       <div class="filter-bar">
         <input type="text" id="search-bar" class="search-input" placeholder="🔍 Search song or artist..." />
         <select id="sort-select" class="sort-select">
@@ -869,12 +843,10 @@
         </select>
       </div>
 
-      <!-- Fast Virtual Playlist Container -->
       <div class="playlist" id="playlist"></div>
     </div>
   </div>
 
-  <!-- Modal Context Menu -->
   <div class="modal-overlay" id="playlist-modal">
     <div class="modal-card">
       <div class="modal-title">Add to Playlist</div>
@@ -883,7 +855,6 @@
     </div>
   </div>
 
-  <!-- Top-Right Colorful Toast Notification Container -->
   <div class="toast-container">
     <div class="toast" id="toast">
       <span id="toast-icon">✨</span>
@@ -893,11 +864,20 @@
 
   <audio id="audio"></audio>
 
-  <!-- Load Songs Script -->
   <script src="songs.js"></script>
 
-  <!-- Music Player Logic -->
   <script>
+    // Register Offline Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').then(() => {
+          console.log('Service Worker Registered Successfully for Offline Mode');
+        }).catch((err) => {
+          console.error('Service Worker Registration Failed:', err);
+        });
+      });
+    }
+
     const DEFAULT_COVER = "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=500&auto=format&fit=crop";
 
     const audio = document.getElementById('audio');
@@ -923,11 +903,9 @@
     const toastText = document.getElementById('toast-text');
     const toastIcon = document.getElementById('toast-icon');
 
-    // Network Status Elements
     const networkBadge = document.getElementById('network-badge');
     const networkText = document.getElementById('network-text');
 
-    // Playlist Elements
     const newPlaylistInput = document.getElementById('new-playlist-name');
     const createPlaylistBtn = document.getElementById('create-playlist-btn');
     const playlistSelect = document.getElementById('playlist-select');
@@ -944,7 +922,6 @@
 
     let customPlaylists = {}; 
 
-    // Online / Offline Status Detection
     function updateNetworkStatus() {
       if (navigator.onLine) {
         networkBadge.className = "network-badge online";
@@ -952,7 +929,7 @@
       } else {
         networkBadge.className = "network-badge offline";
         networkText.textContent = "Offline Mode";
-        showToast("⚡", "Switched to Offline Mode");
+        showToast("⚡", "Switched to Offline Listening Mode");
       }
     }
 
@@ -1006,7 +983,9 @@
     }
 
     function playSong() {
-      audio.play().catch(e => console.log('Autoplay blocked or offline'));
+      audio.play().catch(e => {
+        console.log('Playback error or network unavailable:', e);
+      });
       playerCard.classList.add('playing');
       playIcon.textContent = '❚❚';
     }
@@ -1058,13 +1037,11 @@
       likeBtn.classList.toggle('liked', isLiked);
     }
 
-    /* Enable/Disable button based on user typing */
     newPlaylistInput.addEventListener('input', () => {
       const trimmed = newPlaylistInput.value.trim();
       createPlaylistBtn.disabled = trimmed.length === 0;
     });
 
-    /* Custom Playlist Logic */
     createPlaylistBtn.addEventListener('click', createCustomPlaylist);
     newPlaylistInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter' && !createPlaylistBtn.disabled) {
@@ -1125,7 +1102,6 @@
       }
     });
 
-    /* Filtering & Sorting */
     function getFilteredAndSortedList() {
       if (typeof songs === 'undefined') return [];
       const view = playlistSelect.value;
@@ -1174,7 +1150,6 @@
       toastTimeout = setTimeout(() => toast.classList.remove('show'), 2400);
     }
 
-    /* Volume UI updates */
     function updateVolumeUI(val) {
       const percent = Math.round(val * 100);
       volumePercentEl.textContent = `${percent}%`;
@@ -1225,7 +1200,6 @@
       return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
     }
 
-    /* Render Playlist */
     function renderPlaylist() {
       renderPlaylistOptions();
       const listToRender = getFilteredAndSortedList();
