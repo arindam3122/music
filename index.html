@@ -6,7 +6,6 @@
   <title>MY MUSIC</title>
   <style>
     :root {
-      /* Bright & Vibrant Light Palette */
       --bg-gradient: radial-gradient(circle at 10% 10%, rgba(255, 209, 255, 0.8), transparent 50%),
                       radial-gradient(circle at 90% 90%, rgba(186, 230, 253, 0.8), transparent 50%),
                       linear-gradient(135deg, #e2d1f9 0%, #d5e8ed 50%, #f3e8ff 100%);
@@ -465,8 +464,6 @@
       max-height: 420px;
       overflow-y: auto;
       width: 100%;
-      will-change: transform;
-      contain: content;
     }
 
     .playlist::-webkit-scrollbar {
@@ -477,6 +474,7 @@
       border-radius: 4px;
     }
 
+    /* Fixed playlist item & text layout */
     .playlist-item {
       display: flex;
       align-items: center;
@@ -487,8 +485,7 @@
       border: 1px solid rgba(255, 255, 255, 0.8);
       cursor: pointer;
       width: 100%;
-      overflow: hidden;
-      contain: layout style;
+      min-height: 64px;
       transition: all 0.2s ease;
     }
 
@@ -525,16 +522,14 @@
     }
 
     .playlist-song-title {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 700;
       color: #0f172a;
-      line-height: 1.25;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
+      line-height: 1.3;
+      white-space: nowrap;
       overflow: hidden;
-      word-break: break-word;
+      text-overflow: ellipsis;
+      width: 100%;
     }
 
     .playlist-song-artist {
@@ -544,12 +539,14 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      width: 100%;
     }
 
     .item-actions {
       display: flex;
       align-items: center;
       gap: 4px;
+      flex-shrink: 0;
     }
 
     .item-btn {
@@ -595,7 +592,6 @@
       font-weight: 500;
     }
 
-    /* Modal Styling */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -891,7 +887,6 @@
     </div>
   </div>
 
-  <!-- Add to Playlist Modal -->
   <div class="modal-overlay" id="playlist-modal">
     <div class="modal-card">
       <div class="modal-title">Add to Playlist</div>
@@ -900,7 +895,6 @@
     </div>
   </div>
 
-  <!-- Delete Confirmation Modal -->
   <div class="modal-overlay" id="delete-confirm-modal">
     <div class="modal-card">
       <div class="modal-title">Confirm Delete</div>
@@ -926,7 +920,6 @@
   <script src="songs.js"></script>
 
   <script>
-    // Register Offline Service Worker
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js').then(() => {
@@ -973,14 +966,13 @@
     const modalPlaylistList = document.getElementById('modal-playlist-list');
     const modalCloseBtn = document.getElementById('modal-close-btn');
 
-    // Delete Modal Elements
     const deleteConfirmModal = document.getElementById('delete-confirm-modal');
     const deleteModalDesc = document.getElementById('delete-modal-desc');
     const cancelDeleteBtn = document.getElementById('cancel-delete-btn');
     const confirmDeleteBtn = document.getElementById('confirm-delete-btn');
 
     let currentSongIndex = 0;
-    let pendingDeleteAction = null; // Stores deletion target callback
+    let pendingDeleteAction = null;
     let lastVolume = 0.8;
     let toastTimeout = null;
     let renderDebounceTimer = null;
@@ -1037,8 +1029,8 @@
 
     function loadSong(song) {
       if (!song) return;
-      title.textContent = song.title;
-      artist.textContent = song.artist;
+      title.textContent = song.title || "Unknown Title";
+      artist.textContent = song.artist || "Unknown Artist";
       coverImg.src = sanitizeImageUrl(song.imgSrc);
       audio.src = song.src;
       progress.value = 0;
@@ -1049,7 +1041,7 @@
 
     function playSong() {
       audio.play().catch(e => {
-        console.log('Playback error or network unavailable:', e);
+        console.log('Playback error:', e);
       });
       playerCard.classList.add('playing');
       playIcon.textContent = '❚❚';
@@ -1090,6 +1082,7 @@
     });
 
     function toggleLikeSong(song) {
+      if (!song) return;
       song.isLiked = !song.isLiked;
       if (song.id === songs[currentSongIndex].id) {
         updateLikeButtonState(song.isLiked);
@@ -1132,8 +1125,9 @@
 
     function renderPlaylistOptions() {
       const selected = playlistSelect.value;
-      const totalSongs = typeof songs !== 'undefined' ? songs.length : 0;
-      const likedSongs = typeof songs !== 'undefined' ? songs.filter(s => s.isLiked).length : 0;
+      const validSongs = typeof songs !== 'undefined' ? songs.filter(s => s.title) : [];
+      const totalSongs = validSongs.length;
+      const likedSongs = validSongs.filter(s => s.isLiked).length;
       
       playlistSelect.innerHTML = `
         <option value="all">🎵 All Songs (${totalSongs})</option>
@@ -1156,7 +1150,6 @@
       renderPlaylist();
     });
 
-    // Confirmation Modal Helper
     function openConfirmModal(descriptionText, onConfirmCallback) {
       deleteModalDesc.textContent = descriptionText;
       pendingDeleteAction = onConfirmCallback;
@@ -1168,7 +1161,6 @@
       pendingDeleteAction = null;
     }
 
-    // Delete Playlist Button Click
     deletePlaylistBtn.addEventListener('click', () => {
       const current = playlistSelect.value;
       if (customPlaylists[current]) {
@@ -1182,7 +1174,6 @@
       }
     });
 
-    // Cancel & Confirm Modal Actions
     cancelDeleteBtn.addEventListener('click', closeConfirmModal);
 
     confirmDeleteBtn.addEventListener('click', () => {
@@ -1201,22 +1192,21 @@
     function getFilteredAndSortedList() {
       if (typeof songs === 'undefined') return [];
       const view = playlistSelect.value;
-      let list = [];
+      
+      let list = songs.filter(s => s && s.title && s.title.trim() !== "");
 
-      if (view === 'all') {
-        list = songs;
-      } else if (view === 'fav') {
-        list = songs.filter(s => s.isLiked);
+      if (view === 'fav') {
+        list = list.filter(s => s.isLiked);
       } else if (customPlaylists[view]) {
         const idSet = new Set(customPlaylists[view]);
-        list = songs.filter(s => idSet.has(s.id));
+        list = list.filter(s => idSet.has(s.id));
       }
 
       const query = searchBar.value.toLowerCase().trim();
       if (query) {
         list = list.filter(song => 
-          song.title.toLowerCase().includes(query) || 
-          song.artist.toLowerCase().includes(query)
+          (song.title && song.title.toLowerCase().includes(query)) || 
+          (song.artist && song.artist.toLowerCase().includes(query))
         );
       }
 
@@ -1311,7 +1301,7 @@
 
       listToRender.forEach((song) => {
         const item = document.createElement('div');
-        item.className = `playlist-item ${typeof songs !== 'undefined' && song.id === songs[currentSongIndex].id ? 'active' : ''}`;
+        item.className = `playlist-item ${typeof songs !== 'undefined' && song.id === songs[currentSongIndex]?.id ? 'active' : ''}`;
         item.dataset.id = song.id;
 
         item.innerHTML = `
@@ -1362,15 +1352,19 @@
       const likeBtnClick = e.target.closest('[data-like-id]');
       if (likeBtnClick) {
         e.stopPropagation();
-        toggleLikeSong(songs[parseInt(likeBtnClick.dataset.likeId)]);
+        toggleLikeSong(songs.find(s => s.id === parseInt(likeBtnClick.dataset.likeId)));
         return;
       }
 
       const itemClick = e.target.closest('.playlist-item');
       if (itemClick) {
-        currentSongIndex = parseInt(itemClick.dataset.id);
-        loadSong(songs[currentSongIndex]);
-        playSong();
+        const clickedId = parseInt(itemClick.dataset.id);
+        const targetIndex = songs.findIndex(s => s.id === clickedId);
+        if (targetIndex !== -1) {
+          currentSongIndex = targetIndex;
+          loadSong(songs[currentSongIndex]);
+          playSong();
+        }
       }
     });
 
@@ -1417,7 +1411,7 @@
     function highlightPlaylistItem() {
       const items = playlistEl.querySelectorAll('.playlist-item');
       items.forEach((item) => {
-        item.classList.toggle('active', typeof songs !== 'undefined' && parseInt(item.dataset.id) === songs[currentSongIndex].id);
+        item.classList.toggle('active', typeof songs !== 'undefined' && parseInt(item.dataset.id) === songs[currentSongIndex]?.id);
       });
     }
 
