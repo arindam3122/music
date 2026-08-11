@@ -21,6 +21,30 @@ const songs = [
   },
   {
     id: 2,
+    title: "Aashiq Banaya Aapne Title (Full Song)  Himesh Reshammiya,Shreya Ghoshal  Emraan Hashmi,Tanushree D",
+    artist: "Dua Lipa",
+    src: "songs/Aashiq Banaya Aapne Title (Full Song)  Himesh Reshammiya,Shreya Ghoshal  Emraan Hashmi,Tanushree D.mp3",
+    imgSrc: "https://www.google.com/imgres?q=aashiq%20banaya%20aapne&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fe%2Fec%2FAashiq_Banaya_Aapne.jpg%2F250px-Aashiq_Banaya_Aapne.jpg%3Futm_source%3Den.wikipedia.org%26utm_campaign%3Dparser%26utm_content%3Dthumbnail&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAashiq_Banaya_Aapne&docid=YOngozbb165gPM&tbnid=aTkJuSkcpk_u0M&vet=12ahUKEwjoxMef55iWAxW5zTgGHYEJH_oQnPAOegQINRAA..i&w=250&h=361&hcb=2&ved=2ahUKEwjoxMef55iWAxW5zTgGHYEJH_oQnPAOegQINRAA",
+    isLiked: false
+  },
+  {
+    id: 3,
+    title: "Levitating",
+    artist: "Dua Lipa",
+    src: "songs/song3.mp3",
+    imgSrc: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop",
+    isLiked: false
+  },
+  {
+    id: 4,
+    title: "Levitating",
+    artist: "Dua Lipa",
+    src: "songs/song3.mp3",
+    imgSrc: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop",
+    isLiked: false
+  },
+  {
+    id: 5,
     title: "Levitating",
     artist: "Dua Lipa",
     src: "songs/song3.mp3",
