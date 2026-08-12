@@ -149,7 +149,6 @@
       overflow: hidden;
     }
 
-    /* --- Updated Album Cover Container --- */
     .cover-container {
       position: relative;
       width: 100%;
@@ -164,7 +163,6 @@
       justify-content: center;
     }
 
-    /* Background blur effect to fill letterbox spacing nicely */
     .cover-container::before {
       content: "";
       position: absolute;
@@ -179,7 +177,7 @@
     .cover-img {
       width: 100%;
       height: 100%;
-      object-fit: contain; /* Prevents text cutting off on 16:9 images */
+      object-fit: contain;
       object-position: center;
       display: block;
       position: relative;
@@ -325,7 +323,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 12px;
+      width: 100%;
+      margin: 2px auto;
     }
 
     .btn {
@@ -336,11 +336,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
 
     .btn-secondary {
-      width: 52px;
-      height: 52px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.75);
       border: 1.5px solid rgba(203, 213, 225, 0.8);
@@ -366,9 +367,16 @@
       box-shadow: 0 2px 6px rgba(16, 185, 129, 0.2);
     }
 
+    .btn-secondary.active {
+      color: var(--spotify-green);
+      border-color: rgba(16, 185, 129, 0.8);
+      background: rgba(16, 185, 129, 0.15);
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+    }
+
     .btn-secondary svg {
-      width: 26px;
-      height: 26px;
+      width: 20px;
+      height: 20px;
       transition: transform 0.2s ease;
     }
 
@@ -384,8 +392,8 @@
       background-color: var(--spotify-green);
       border: 2px solid rgba(255, 255, 255, 0.85);
       color: #ffffff;
-      width: 60px;
-      height: 60px;
+      width: 54px;
+      height: 54px;
       border-radius: 50%;
       font-size: 1.35rem;
       box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
@@ -584,7 +592,9 @@
       cursor: pointer;
       width: 100%;
       min-height: 64px;
-      transition: all 0.2s ease;
+      transition: background 0.2s, box-shadow 0.2s;
+      content-visibility: auto;
+      contain-intrinsic-size: 64px;
     }
 
     .playlist-item:hover {
@@ -601,12 +611,11 @@
       color: #059669;
     }
 
-    /* --- Playlist Thumbnails --- */
     .playlist-thumb {
       width: 44px;
       height: 44px;
       border-radius: 8px;
-      object-fit: contain; /* Uncropped thumb view */
+      object-fit: contain;
       object-position: center;
       flex-shrink: 0;
       background: #1e293b;
@@ -945,6 +954,12 @@
       </div>
 
       <div class="controls">
+        <button class="btn btn-secondary" id="shuffle" aria-label="Shuffle" title="Toggle Shuffle">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.45 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
+          </svg>
+        </button>
+
         <button class="btn btn-secondary" id="prev" aria-label="Previous">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
         </button>
@@ -955,6 +970,12 @@
 
         <button class="btn btn-secondary" id="next" aria-label="Next">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6z"/></svg>
+        </button>
+
+        <button class="btn btn-secondary" id="repeat" aria-label="Repeat" title="Toggle Repeat">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
+          </svg>
         </button>
       </div>
 
@@ -1045,6 +1066,8 @@
     const playIcon = document.getElementById('play-icon');
     const prevBtn = document.getElementById('prev');
     const nextBtn = document.getElementById('next');
+    const shuffleBtn = document.getElementById('shuffle');
+    const repeatBtn = document.getElementById('repeat');
     const title = document.getElementById('title');
     const artist = document.getElementById('artist');
     const coverContainer = document.querySelector('.cover-container');
@@ -1084,10 +1107,14 @@
     const confirmDeleteBtn = document.getElementById('confirm-delete-btn');
 
     let currentSongIndex = 0;
+    let isShuffle = false;
+    let isRepeat = false;
     let pendingDeleteAction = null;
     let lastVolume = 0.8;
     let toastTimeout = null;
-    let renderDebounceTimer = null;
+
+    let currentChunk = 30;
+    let searchDebounceTimer = null;
 
     let customPlaylists = {}; 
 
@@ -1151,6 +1178,8 @@
       updateVolumeUI(volumeSlider.value);
       updateSliderFill(progress, 0);
       updatePlaybackStatusUI(false);
+      
+      setupMediaSessionHandlers();
     }
 
     function loadSong(song) {
@@ -1161,7 +1190,6 @@
       artist.textContent = song.artist || "Unknown Artist";
       coverImg.src = imgUrl;
 
-      // Sets dynamic blurred background behind non-square covers
       coverContainer.style.setProperty('--bg-cover-url', `url('${imgUrl}')`);
 
       audio.src = song.src;
@@ -1169,10 +1197,39 @@
       updateSliderFill(progress, 0);
       updateLikeButtonState(song.isLiked);
       highlightPlaylistItem();
+
+      // MEDIA SESSION API: Sync metadata with Mobile Lockscreen / Notification Controls
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: song.title || "Unknown Title",
+          artist: song.artist || "Unknown Artist",
+          artwork: [
+            { src: imgUrl, sizes: '96x96', type: 'image/png' },
+            { src: imgUrl, sizes: '128x128', type: 'image/png' },
+            { src: imgUrl, sizes: '192x192', type: 'image/png' },
+            { src: imgUrl, sizes: '256x256', type: 'image/png' },
+            { src: imgUrl, sizes: '384x384', type: 'image/png' },
+            { src: imgUrl, sizes: '512x512', type: 'image/png' }
+          ]
+        });
+      }
+    }
+
+    function setupMediaSessionHandlers() {
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.setActionHandler('play', () => playSong());
+        navigator.mediaSession.setActionHandler('pause', () => pauseSong());
+        navigator.mediaSession.setActionHandler('previoustrack', () => prevBtn.click());
+        navigator.mediaSession.setActionHandler('nexttrack', () => nextBtn.click());
+      }
     }
 
     function playSong() {
-      audio.play().catch(e => {
+      audio.play().then(() => {
+        if ('mediaSession' in navigator) {
+          navigator.mediaSession.playbackState = "playing";
+        }
+      }).catch(e => {
         console.log('Playback error:', e);
       });
       playerCard.classList.add('playing');
@@ -1182,6 +1239,9 @@
 
     function pauseSong() {
       audio.pause();
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.playbackState = "paused";
+      }
       playerCard.classList.remove('playing');
       playIcon.textContent = '▶';
       updatePlaybackStatusUI(false);
@@ -1191,12 +1251,37 @@
       audio.paused ? playSong() : pauseSong();
     });
 
+    shuffleBtn.addEventListener('click', () => {
+      isShuffle = !isShuffle;
+      shuffleBtn.classList.toggle('active', isShuffle);
+      
+      if (isShuffle) {
+        showToast("🔀", "Shuffle Mode Enabled");
+      } else {
+        showToast("🔁", "Sequential Mode Enabled");
+      }
+    });
+
+    repeatBtn.addEventListener('click', () => {
+      isRepeat = !isRepeat;
+      repeatBtn.classList.toggle('active', isRepeat);
+      audio.loop = isRepeat;
+      
+      if (isRepeat) {
+        showToast("🔂", "Repeat Track Enabled");
+      } else {
+        showToast("➡️", "Repeat Disabled");
+      }
+    });
+
     prevBtn.addEventListener('click', () => {
       const currentList = getFilteredAndSortedList();
       if (currentList.length === 0) return;
+      
       let idx = currentList.findIndex(s => s.id === songs[currentSongIndex].id);
       idx = (idx - 1 + currentList.length) % currentList.length;
       currentSongIndex = currentList[idx].id;
+
       loadSong(songs[currentSongIndex]);
       playSong();
     });
@@ -1204,9 +1289,20 @@
     nextBtn.addEventListener('click', () => {
       const currentList = getFilteredAndSortedList();
       if (currentList.length === 0) return;
-      let idx = currentList.findIndex(s => s.id === songs[currentSongIndex].id);
-      idx = (idx + 1) % currentList.length;
-      currentSongIndex = currentList[idx].id;
+
+      if (isShuffle) {
+        let randomIndex;
+        do {
+          randomIndex = Math.floor(Math.random() * currentList.length);
+        } while (currentList.length > 1 && currentList[randomIndex].id === songs[currentSongIndex].id);
+        
+        currentSongIndex = currentList[randomIndex].id;
+      } else {
+        let idx = currentList.findIndex(s => s.id === songs[currentSongIndex].id);
+        idx = (idx + 1) % currentList.length;
+        currentSongIndex = currentList[idx].id;
+      }
+
       loadSong(songs[currentSongIndex]);
       playSong();
     });
@@ -1253,6 +1349,7 @@
       createPlaylistBtn.disabled = true;
       renderPlaylistOptions();
       playlistSelect.value = name;
+      currentChunk = 30;
       renderPlaylist();
       showToast("📂", `Created playlist "${name}"`);
     }
@@ -1281,6 +1378,7 @@
 
     playlistSelect.addEventListener('change', () => {
       deletePlaylistBtn.style.display = (playlistSelect.value !== 'all' && playlistSelect.value !== 'fav') ? 'block' : 'none';
+      currentChunk = 30;
       renderPlaylist();
     });
 
@@ -1302,6 +1400,7 @@
           delete customPlaylists[current];
           showToast("🗑️", `Deleted playlist "${current}"`);
           playlistSelect.value = 'all';
+          currentChunk = 30;
           renderPlaylistOptions();
           renderPlaylist();
         });
@@ -1356,11 +1455,17 @@
     }
 
     searchBar.addEventListener('input', () => {
-      clearTimeout(renderDebounceTimer);
-      renderDebounceTimer = setTimeout(renderPlaylist, 100);
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = setTimeout(() => {
+        currentChunk = 30;
+        renderPlaylist();
+      }, 200);
     });
 
-    sortSelect.addEventListener('change', renderPlaylist);
+    sortSelect.addEventListener('change', () => {
+      currentChunk = 30;
+      renderPlaylist();
+    });
 
     function showToast(icon, message) {
       clearTimeout(toastTimeout);
@@ -1412,7 +1517,11 @@
       }
     });
 
-    audio.addEventListener('ended', () => nextBtn.click());
+    audio.addEventListener('ended', () => {
+      if (!isRepeat) {
+        nextBtn.click();
+      }
+    });
 
     function formatTime(seconds) {
       const mins = Math.floor(seconds / 60);
@@ -1430,10 +1539,11 @@
         return;
       }
 
+      const visibleSongs = listToRender.slice(0, currentChunk);
       const isCustomView = customPlaylists[playlistSelect.value] !== undefined;
       const fragment = document.createDocumentFragment();
 
-      listToRender.forEach((song) => {
+      visibleSongs.forEach((song) => {
         const item = document.createElement('div');
         item.className = `playlist-item ${typeof songs !== 'undefined' && song.id === songs[currentSongIndex]?.id ? 'active' : ''}`;
         item.dataset.id = song.id;
@@ -1458,6 +1568,16 @@
 
       playlistEl.appendChild(fragment);
     }
+
+    playlistEl.addEventListener('scroll', () => {
+      if (playlistEl.scrollTop + playlistEl.clientHeight >= playlistEl.scrollHeight - 60) {
+        const totalAvailable = getFilteredAndSortedList().length;
+        if (currentChunk < totalAvailable) {
+          currentChunk += 20;
+          renderPlaylist();
+        }
+      }
+    });
 
     playlistEl.addEventListener('click', (e) => {
       const addBtn = e.target.closest('[data-add-id]');

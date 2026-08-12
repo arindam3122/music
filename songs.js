@@ -117,10 +117,10 @@ const songs = [
   },
   {
     id: 14,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Chori Kiya Re Jiya - Full Song  Dabangg  Salman Khan, Sonakshi Sinha  Sonu Nigam  tinyaudio",
+    artist: "Salman Khan, Sonakshi Sinha, Sonu Nigam",
+    src: "songs/Chori Kiya Re Jiya - Full Song  Dabangg  Salman Khan, Sonakshi Sinha  Sonu Nigam  tinyaudio.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Chori%20Kiya%20Re%20Jiya%20-%20Full%20Song%20Dabangg&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FrxgF5Ng2Exw%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DrxgF5Ng2Exw&docid=Ybo8nu9AmTUqUM&tbnid=4YRaBIfCUJVt1M&vet=12ahUKEwi8_eywjZqWAxVZ8zgGHY2nLA4QnPAOegQINhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwi8_eywjZqWAxVZ8zgGHY2nLA4QnPAOegQINhAA",
     isLiked: false
   },
   {
