@@ -229,54 +229,118 @@ const songs = [
   },
   {
     id: 28,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Full Song_ Pehla Pyaar  Kabir Singh  Shahid Kapoor, Kiara Advani  Armaan Malik  Vishal Mishra",
+    artist: "Kabir Singh  Shahid Kapoor, Kiara Advani  Armaan Malik  Vishal Mishra",
+    src: "songs/Full Song_ Pehla Pyaar  Kabir Singh  Shahid Kapoor, Kiara Advani  Armaan Malik  Vishal Mishra.mp3",
+    imgSrc: "https://www.google.com/imgres?q=pehla%20pyaar%20kabir%20singh%20&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FB7SkAq_94J8%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DB7SkAq_94J8&docid=Ph-OKgjAM3SKgM&tbnid=VkJ-u2WEKiZmWM&vet=12ahUKEwjL3ZK9jpuWAxVJ2TgGHd1NOtYQnPAOegQIOhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjL3ZK9jpuWAxVJ2TgGHd1NOtYQnPAOegQIOhAA",
     isLiked: false
   },
   {
     id: 29,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Full Video_ Tum Se Hi  Jab We Met  Kareena Kapoor, Shahid Kapoor  Mohit Chauhan  Pritam",
+    artist: "Kareena Kapoor, Shahid Kapoor  Mohit Chauhan  Pritam",
+    src: "songs/Full Video_ Tum Se Hi  Jab We Met  Kareena Kapoor, Shahid Kapoor  Mohit Chauhan  Pritam.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Tum%20Se%20Hi%20%20Jab%20We%20Met%20%20Kareena%20Kapoor&imgurl=https%3A%2F%2Fa10.gaanacdn.com%2Fgn_img%2Falbums%2FoAJbDElKnL%2FoAJbDElKnL%2Fsize_m.jpg&imgrefurl=https%3A%2F%2Fgaana.com%2Fsong%2Ftum-se-hi-remix&docid=83DaVCUn1CbZJM&tbnid=zNZNnHY8GMfusM&vet=12ahUKEwjqrbDtjpuWAxVb3jgGHZRaPdIQnPAOegUImQEQAA..i&w=200&h=200&hcb=2&ved=2ahUKEwjqrbDtjpuWAxVb3jgGHZRaPdIQnPAOegUImQEQAA",
     isLiked: false
   },
   {
     id: 30,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Ghum Ghum Ei Chokhe  Romeo  Dev  Subhashree  Shreya  Sonu Nigam  Jeet Gannguli  Sujit  SVF",
+    artist: "Dev  Subhashree  Shreya  Sonu Nigam  Jeet Gannguli  Sujit",
+    src: "songs/Ghum Ghum Ei Chokhe  Romeo  Dev  Subhashree  Shreya  Sonu Nigam  Jeet Gannguli  Sujit  SVF.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Ghum%20Ghum%20Ei%20Chokhe%20%20Romeo%20%20Dev%20%20Subhashree%20%20Shreya%20%20Sonu%20Nigam%20%20Jeet%20Gannguli%20%20Sujit%20%20SVF&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FrqUPmN-rGhw%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DrqUPmN-rGhw&docid=np4x_KQ8LhMkTM&tbnid=LESua--C04O_LM&vet=12ahUKEwjmz5mMj5uWAxWD8zgGHdCnNBYQnPAOegQIPhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjmz5mMj5uWAxWD8zgGHdCnNBYQnPAOegQIPhAA",
     isLiked: false
   },
   {
     id: 31,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Hote Paare Na  হত পর ন  Bolo Dugga Maiki  Ankush  Nusrat  Arindom  Prashmita  Raj",
+    artist: "Ankush  Nusrat  Arindom  Prashmita  Raj",
+    src: "songs/Hote Paare Na  হত পর ন  Bolo Dugga Maiki  Ankush  Nusrat  Arindom  Prashmita  Raj.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Hote%20Paare%20Na%20%20%E0%A6%B9%E0%A6%A4%20%E0%A6%AA%E0%A6%B0%20%E0%A6%A8%20%20Bolo%20Dugga%20Maiki%20%20Ankush%20%20Nusrat%20%20Arindom%20%20Prashmita%20%20Raj&imgurl=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d0000b2732cf78e9352b8cdb025babdf5&imgrefurl=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F2QSX6Bv7ONPEkrSkx1YhMd&docid=1jmtt8_zJ4-S8M&tbnid=Sdzcs2FuBfvw-M&vet=12ahUKEwjksZGkj5uWAxXE2DgGHYL8ENQQnPAOegUIkAEQAA..i&w=640&h=640&hcb=2&ved=2ahUKEwjksZGkj5uWAxXE2DgGHYL8ENQQnPAOegUIkAEQAA",
     isLiked: false
   },
   {
     id: 32,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Humdard Full Video Song  Ek Villain  Arijit Singh  Mithoon",
+    artist: "Arijit Singh",
+    src: "songs/Humdard Full Video Song  Ek Villain  Arijit Singh  Mithoon.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Humdard%20Full%20Video%20Song%20%20Ek%20Villain%20%20Arijit%20Singh%20%20Mithoon&imgurl=https%3A%2F%2Fi1.sndcdn.com%2Fartworks-000080949258-rn3yzi-t500x500.jpg&imgrefurl=https%3A%2F%2Fm.soundcloud.com%2Fcutebut_syko%2Fhumdard-ek-villain-2014-arijit-singh%3Fin%3Ditslovesmusic%252Fsets%252Ftop-50-bollywood-songs-2023&docid=DRkfzFida4EgyM&tbnid=c4iJeQ5O30oq9M&vet=12ahUKEwiPh_q_j5uWAxVu8jgGHXZTPWAQnPAOegUImwEQAA..i&w=500&h=500&hcb=2&itg=1&ved=2ahUKEwiPh_q_j5uWAxVu8jgGHXZTPWAQnPAOegUImwEQAA",
     isLiked: false
   },
   {
     id: 33,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "I Am In Love Lyrical Video  Once Upon A Time In Mumbai  Pritam  Emraan Hashmi, Prachi Desai",
+    artist: "Pritam  Emraan Hashmi, Prachi Desai",
+    src: "songs/I Am In Love Lyrical Video  Once Upon A Time In Mumbai  Pritam  Emraan Hashmi, Prachi Desai.mp3",
+    imgSrc: "https://www.google.com/imgres?q=I%20Am%20In%20Love%20Lyrical%20Video%20%20Once%20Upon%20A%20Time%20In%20Mumbai%20%20Pritam%20%20Emraan%20Hashmi%2C%20Prachi%20Desai&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FDMLrGfMxOQA%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDMLrGfMxOQA&docid=lrXBluasM6aDKM&tbnid=qUCtx65sGTay3M&vet=12ahUKEwi98OHGkJuWAxXnRCoJHa0NDYAQnPAOegQIRBAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwi98OHGkJuWAxXnRCoJHa0NDYAQnPAOegQIRBAA",
     isLiked: false
   },
   {
     id: 34,
+    title: "Illahi - Yeh Jawaani Hai Deewani  Ranbir Kapoor, Deepika Padukone",
+    artist: "Ranbir Kapoor, Deepika Padukone",
+    src: "songs/Illahi - Yeh Jawaani Hai Deewani  Ranbir Kapoor, Deepika Padukone.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Illahi%20-%20Yeh%20Jawaani%20Hai%20Deewani%20%20Ranbir%20Kapoor%2C%20Deepika%20Padukone&imgurl=https%3A%2F%2Fc.saavncdn.com%2F440%2FYeh-Jawaani-Hai-Deewani-2013-500x500.jpg&imgrefurl=https%3A%2F%2Fapi.jiosaavn.com%2Fsong%2Filahi%2FRCsibkRSTUc&docid=uQqelCQapuGkZM&tbnid=Won5MNaz19yj1M&vet=12ahUKEwiqudflkJuWAxUmzTgGHTDdLtEQnPAOegQIRRAA..i&w=500&h=500&hcb=2&itg=1&ved=2ahUKEwiqudflkJuWAxUmzTgGHTDdLtEQnPAOegQIRRAA",
+    isLiked: false
+  },
+  {
+    id: 35,
+    title: "Iskcon Bhajans  Namah Namah Tulsi  Iskcon Prabhati Aarti",
+    artist: "Iskcon Prabhati Aarti",
+    src: "songs/Iskcon Bhajans  Namah Namah Tulsi  Iskcon Prabhati Aarti.mp3",
+    imgSrc: "https://www.google.com/imgres?q=skcon%20Bhajans%20%20Namah%20Namah%20Tulsi&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F2nzgDj2CLcw%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2nzgDj2CLcw&docid=882lXeFWAk60iM&tbnid=LWCn3nEkrAdWnM&vet=12ahUKEwjPkuuukZuWAxU9wzgGHQgcDRIQnPAOegQIQBAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjPkuuukZuWAxU9wzgGHQgcDRIQnPAOegQIQBAA",
+    isLiked: false
+  },
+  {
+    id: 36,
+    title: "Iskcon Sandhya aarti  Jaya Jaya Gora Chander  Hare Krishna",
+    artist: "Jaya Jaya Gora Chander",
+    src: "songs/Iskcon Sandhya aarti  Jaya Jaya Gora Chander  Hare Krishna.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Iskcon%20Sandhya%20aarti%20%20Jaya%20Jaya%20Gora%20Chander%20%20Hare%20Krishna&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F2JadzV0IzbY%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2JadzV0IzbY&docid=7rhWcENOwgg4jM&tbnid=sla7O_8U8OsHkM&vet=12ahUKEwio4IDNkZuWAxVP6jgGHYXuNecQnPAOegQIRRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwio4IDNkZuWAxVP6jgGHYXuNecQnPAOegQIRRAA",
+    isLiked: false
+  },
+  {
+    id: 37,
+    title: "Itni Si Baat Hain Full Video Song  AZHAR  Emraan Hashmi, Prachi Desai  Arijit Singh, Pritam",
+    artist: "AZHAR  Emraan Hashmi, Prachi Desai  Arijit Singh",
+    src: "songs/Itni Si Baat Hain Full Video Song  AZHAR  Emraan Hashmi, Prachi Desai  Arijit Singh, Pritam.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Itni%20Si%20Baat%20Hain%20Full%20Video%20Song%20%20AZHAR%20%20Emraan%20Hashmi%2C%20Prachi%20Desai%20%20Arijit%20Singh%2C%20Pritam&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1o_brS03A5A%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D1o_brS03A5A&docid=a9_9EoiWU3VMLM&tbnid=VvjO50sjPrrshM&vet=12ahUKEwivw-bukZuWAxWm8qACHaNdA8wQnPAOegQIRRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwivw-bukZuWAxWm8qACHaNdA8wQnPAOegQIRRAA",
+    isLiked: false
+  },
+  {
+    id: 38,
+    title: "Jaavedaan Hai Lyrical Video  1920 Evil Returns  KK, Suzanne D'Mello",
+    artist: "KK",
+    src: "songs/Jaavedaan Hai Lyrical Video  1920 Evil Returns  KK, Suzanne D'Mello.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Jaavedaan%20Hai%20Lyrical%20Video%20%201920%20Evil%20Returns%20%20KK%2C%20Suzanne%20D%27Mello&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FOocst6d2scU%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DOocst6d2scU&docid=u4-rdqVLobsVCM&tbnid=Xn5CEMI9xEsbGM&vet=12ahUKEwi06-eJkpuWAxVfwTgGHe0TI5sQnPAOegQIIBAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwi06-eJkpuWAxVfwTgGHe0TI5sQnPAOegQIIBAA",
+    isLiked: false
+  },
+  {
+    id: 39,
+    title: "Jab Se Tere Naina Lyrical Video - Saawariya  Ranbir Kapoor  Sonam Kapoor  Shaan",
+    artist: "Saawariya  Ranbir Kapoor  Sonam Kapoor  Shaan",
+    src: "songs/Jab Se Tere Naina Lyrical Video - Saawariya  Ranbir Kapoor  Sonam Kapoor  Shaan.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Jab%20Se%20Tere%20Naina%20Lyrical%20Video%20-%20Saawariya%20%20Ranbir%20Kapoor%20%20Sonam%20Kapoor%20%20Shaan&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F6_1p9FZSSUs%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLCnAYUyztJNK3mnR3STmG0mVZzsCw&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D6_1p9FZSSUs&docid=5m0Aq0JT-1tezM&tbnid=BNCbWY4volOy9M&vet=12ahUKEwj-y4CqkpuWAxW53TgGHcpLOAAQnPAOegQIQRAA..i&w=686&h=386&hcb=2&ved=2ahUKEwj-y4CqkpuWAxW53TgGHcpLOAAQnPAOegQIQRAA",
+    isLiked: false
+  },
+  {
+    id:40,
+    title: "Jag Ghoomeya Full Song  SULTAN  Salman Khan, Anushka Sharma  Rahat Fateh Ali Khan, Vishal-Shekhar",
+    artist: "Salman Khan, Anushka Sharma  Rahat Fateh Ali Khan, Vishal-Shekhar",
+    src: "songs/Jag Ghoomeya Full Song  SULTAN  Salman Khan, Anushka Sharma  Rahat Fateh Ali Khan, Vishal-Shekhar.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Jag%20Ghoomeya%20Full%20Song%20%20SULTAN%20%20Salman%20Khan%2C%20Anushka%20Sharma%20%20Rahat%20Fateh%20Ali%20Khan%2C%20Vishal-Shekhar&imgurl=https%3A%2F%2Fa10.gaanacdn.com%2Fgn_img%2Falbums%2F4Z9bqgo3yQ%2FZ9bq1A9Dby%2Fsize_m.webp&imgrefurl=https%3A%2F%2Fgaana.com%2Fsong%2Fjag-ghoomeya&docid=r-zZ5S61-ZSgKM&tbnid=NxgxNhB_TvFZoM&vet=12ahUKEwic9erFkpuWAxWj8DgGHWdZDkgQnPAOegUIpwEQAA..i&w=200&h=200&hcb=2&ved=2ahUKEwic9erFkpuWAxWj8DgGHWdZDkgQnPAOegUIpwEQAA",
+    isLiked: false
+  },
+  {
+    id: 41,
+    title: "Jane Mon  Paglu  Dev  Koel Mallick  Jeet Gannguli  Rajib Kumar",
+    artist: "Dev  Koel Mallick  Jeet Gannguli  Rajib Kumar",
+    src: "songs/Jane Mon  Paglu  Dev  Koel Mallick  Jeet Gannguli  Rajib Kumar.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Jane%20Mon%20%20Paglu%20%20Dev%20%20Koel%20Mallick%20%20Jeet%20Gannguli%20%20Rajib%20Kumar&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F9XalgNH_FOs%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9XalgNH_FOs&docid=2lE_rQd1bK-PJM&tbnid=ICjE7zA7-usvFM&vet=12ahUKEwif88rnkpuWAxWuzjgGHU-1ArgQnPAOegQIQxAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwif88rnkpuWAxWuzjgGHU-1ArgQnPAOegQIQxAA",
+    isLiked: false
+  },
+  {
+    id: 42,
     title: "",
     artist: "",
     src: "",
@@ -284,7 +348,55 @@ const songs = [
     isLiked: false
   },
   {
-    id: 35,
+    id: 43,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 44,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 45,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 46,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 47,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 48,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 49,
     title: "",
     artist: "",
     src: "",
