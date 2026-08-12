@@ -157,22 +157,46 @@ const songs = [
   },
   {
     id: 19,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Dekha Ek Khwab with lyrics दख एक खवब Silsila Amitabh Bachchan Lata Mangeshkar, Kishore Kumar",
+    artist: "Amitabh Bachchan Lata Mangeshkar, Kishore Kumar",
+    src: "songs/Dekha Ek Khwab with lyrics दख एक खवब Silsila Amitabh Bachchan Lata Mangeshkar, Kishore Kumar.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Dekha%20Ek%20Khwab&imgurl=https%3A%2F%2Fc.saavncdn.com%2F471%2FDekha-Ek-Khwab-Hindi-2015-500x500.jpg&imgrefurl=https%3A%2F%2Fwww.jiosaavn.com%2Falbum%2Fdekha-ek-khwab%2F8hlbX-q8T8Q_&docid=gc0ActF8jNXdFM&tbnid=NQ_i5zNsRTegsM&vet=12ahUKEwjrxfKstZqWAxU5XWwGHdQeH4cQnPAOegQIPxAA..i&w=500&h=500&hcb=2&ved=2ahUKEwjrxfKstZqWAxU5XWwGHdQeH4cQnPAOegQIPxAA",
     isLiked: false
   },
   {
     id: 20,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Dekhechi Tomake Srabone  Challenge  Lyrical  Dev  Subhashree  Shaan, June  Jeet G  SVF Music",
+    artist: "Dev  Subhashree  Shaan, June  Jeet G",
+    src: "songs/Dekhechi Tomake Srabone  Challenge  Lyrical  Dev  Subhashree  Shaan, June  Jeet G  SVF Music.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Dekhechi%20Tomake%20Srabone&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F6WMMvXbiU6U%2Fsddefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D6WMMvXbiU6U&docid=iPjPWcHm5ndhMM&tbnid=A33zFQW4gUx1nM&vet=12ahUKEwidyJbOtZqWAxXvSWwGHY9CK7MQnPAOegUIhgEQAA..i&w=640&h=480&hcb=2&ved=2ahUKEwidyJbOtZqWAxXvSWwGHY9CK7MQnPAOegUIhgEQAA",
     isLiked: false
   },
   {
     id: 21,
+    title: "Dil Na Diya - Video Song  Krrish  Kunal Ganjawala  Rajesh Roshan  Hrithik Roshan,Priyanka Chopra",
+    artist: "Kunal Ganjawala  Rajesh Roshan  Hrithik Roshan,Priyanka Chopra",
+    src: "songs/Dil Na Diya - Video Song  Krrish  Kunal Ganjawala  Rajesh Roshan  Hrithik Roshan,Priyanka Chopra.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Dil%20Na%20Diya&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F-eRzKCeX7YM%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D-eRzKCeX7YM&docid=A6A4YLrQUYbRlM&tbnid=BFL_rAHD_iwFEM&vet=12ahUKEwjh9umbtpqWAxVxWXADHYjRNWIQnPAOegQIRBAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjh9umbtpqWAxVxWXADHYjRNWIQnPAOegQIRBAA",
+    isLiked: false
+  },
+  {
+    id: 22,
+    title: "Dil Tu Hi Bataa Krrish 3 Full Video Song  Hrithik Roshan, Kangana Ranaut",
+    artist: "Hrithik Roshan, Kangana Ranaut",
+    src: "songs/Dil Tu Hi Bataa Krrish 3 Full Video Song  Hrithik Roshan, Kangana Ranaut.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Dil%20Tu%20Hi%20Bataa%20Krrish%203&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FocfLz44HoTA%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLA1duNGiqlQlmeOF81KMl8e199PsA&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DocfLz44HoTA&docid=RHnxCdNizripqM&tbnid=WZgLORpMrzPm3M&vet=12ahUKEwj0tLP3tpqWAxXXRWwGHbHkNSoQnPAOegQIQxAA..i&w=686&h=386&hcb=2&ved=2ahUKEwj0tLP3tpqWAxXXRWwGHbHkNSoQnPAOegQIQxAA",
+    isLiked: false
+  },
+  {
+    id: 23,
+    title: "Dunki_ O Maahi 8K Full Song  Shah Rukh Khan  Taapsee Pannu  Pritam  Arijit Singh  Irshad Kamil",
+    artist: "Shah Rukh Khan  Taapsee Pannu  Pritam",
+    src: "songs/Dunki_ O Maahi 8K Full Song  Shah Rukh Khan  Taapsee Pannu  Pritam  Arijit Singh  Irshad Kamil.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Dunki_%20O%20Maahi&imgurl=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F51i%2BcTjaSAL._UXNaN_FMjpg_QL85_.jpg&imgrefurl=https%3A%2F%2Fmusic.amazon.in%2Ftracks%2FB0CQPH8LHS&docid=LjqgT8IginnHLM&tbnid=icdgadjcLRQdZM&vet=12ahUKEwiS7rWyt5qWAxWeRmwGHYcHDj8QnPAOegUIqgEQAA..i&w=500&h=500&hcb=2&ved=2ahUKEwiS7rWyt5qWAxWeRmwGHYcHDj8QnPAOegUIqgEQAA",
+    isLiked: false
+  },
+  {
+    id: 24,
     title: "",
     artist: "",
     src: "",
@@ -180,11 +204,27 @@ const songs = [
     isLiked: false
   },
   {
-    id: 22,
+    id: 23,
     title: "",
     artist: "",
     src: "",
     imgSrc: "",
     isLiked: false
-  }
+  },
+  {
+    id: 23,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 23,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
 ];
