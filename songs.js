@@ -341,54 +341,70 @@ const songs = [
   },
   {
     id: 42,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Jeno Tomari Kache (যন তমরই কছ)-Lyrical  Shudhu Tomari Jonyo  Dev  Srabanti  SVF",
+    artist: "Dev  Srabanti",
+    src: "songs/Jeno Tomari Kache (যন তমরই কছ)-Lyrical  Shudhu Tomari Jonyo  Dev  Srabanti  SVF.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Jeno%20Tomari%20Kache%20(%E0%A6%AF%E0%A6%A8%20%E0%A6%A4%E0%A6%AE%E0%A6%B0%E0%A6%87%20%E0%A6%95%E0%A6%9B)-Lyrical%20%20Shudhu%20Tomari%20Jonyo%20%20Dev%20%20Srabanti%20%20SVF&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Ftn0-kZMpL9M%2Fsddefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dtn0-kZMpL9M&docid=k-99jY0ucPYSuM&tbnid=Hy_FijxIxZYieM&vet=12ahUKEwiVob7MmJuWAxWUUGcHHZi4NisQnPAOegQIRhAA..i&w=640&h=480&hcb=2&ved=2ahUKEwiVob7MmJuWAxWUUGcHHZi4NisQnPAOegQIRhAA",
     isLiked: false
   },
   {
     id: 43,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Jor Jhattka Legeche জর ঝটক লগছ Video  Nakash Aziz & June B  Dabbu  Rajiv Dutta",
+    artist: "Nakash Aziz & June B  Dabbu  Rajiv Dutta",
+    src: "songs/Jor Jhattka Legeche জর ঝটক লগছ Video  Nakash Aziz & June B  Dabbu  Rajiv Dutta.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Jor%20Jhattka%20Legeche%20%E0%A6%9C%E0%A6%B0%20%E0%A6%9D%E0%A6%9F%E0%A6%95%20%E0%A6%B2%E0%A6%97%E0%A6%9B%20Video%20%20Nakash%20Aziz%20%26%20June%20B%20%20Dabbu%20%20Rajiv%20Dutta&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FM9WwvTGnCIo%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DM9WwvTGnCIo&docid=hkWCRh0MIBY4GM&tbnid=fnQGFMtMHdSv-M&vet=12ahUKEwj1k4bpmJuWAxX6SWwGHfy6Kg8QnPAOegQIQhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwj1k4bpmJuWAxX6SWwGHfy6Kg8QnPAOegQIQhAA",
     isLiked: false
   },
   {
     id: 44,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Ke Tui Bol  Herogiri  Dev  Sayantika  Arijit Singh  Jeet Gannguli",
+    artist: "Dev  Sayantika  Arijit Singh  Jeet Gannguli",
+    src: "songs/Ke Tui Bol  Herogiri  Dev  Sayantika  Arijit Singh  Jeet Gannguli.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Ke%20Tui%20Bol%20%20Herogiri%20%20Dev%20%20Sayantika%20%20Arijit%20Singh%20%20Jeet%20Gannguli&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F8NbpwbrJrFA%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D8NbpwbrJrFA&docid=BB4y5VaDSj8rRM&tbnid=S0Rz0p9C-TFf5M&vet=12ahUKEwjm8bqGmZuWAxXDT2wGHYzcJIgQnPAOegQIQRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjm8bqGmZuWAxXDT2wGHYzcJIgQnPAOegQIQRAA",
     isLiked: false
   },
   {
     id: 45,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "'Khoya Khoya' FULL VIDEO Song  Sooraj Pancholi, Athiya Shetty  Hero  T-Series",
+    artist: "Sooraj Pancholi, Athiya Shetty",
+    src: "songs/'Khoya Khoya' FULL VIDEO Song  Sooraj Pancholi, Athiya Shetty  Hero  T-Series.mp3",
+    imgSrc: "https://www.google.com/imgres?q=%27Khoya%20Khoya%27%20FULL%20VIDEO%20Song%20%20Sooraj%20Pancholi%2C%20Athiya%20Shetty%20%20Hero%20%20T-Series&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FIMEfTUlD6YU%2Fhq720.jpg%3Fsqp%3D-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH8CYAC0AWKAgwIABABGH8gEyhDMA8%3D%26rs%3DAOn4CLCRiocVd-wIxXjz8cuYxpSMsa72rg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DIMEfTUlD6YU&docid=uFZqgsp7shOrvM&tbnid=OZSPQ5ay4grDbM&vet=12ahUKEwiSiuCgmZuWAxXqTGwGHR3DAeMQnPAOegUIiQEQAA..i&w=686&h=386&hcb=2&itg=1&ved=2ahUKEwiSiuCgmZuWAxXqTGwGHR3DAeMQnPAOegUIiQEQAA",
     isLiked: false
   },
   {
     id: 46,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "KK Best Song - Aashayein  Iqbal  KK Best Songs  Best Of KK",
+    artist: "KK",
+    src: "songs/KK Best Song - Aashayein  Iqbal  KK Best Songs  Best Of KK.mp3",
+    imgSrc: "https://www.google.com/imgres?q=KK%20Best%20Song%20-%20Aashayein%20%20Iqbal%20%20KK%20Best%20Songs%20%20Best%20Of%20KK&imgurl=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d0000b273891e0c17f252e109c20a7882&imgrefurl=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F0d54B7VI12WOMK8AoIWllf&docid=tQjCdb6gdCO8_M&tbnid=YwVpDBCX6LbzKM&vet=12ahUKEwjCzKG-mZuWAxWFTGwGHVjzGEMQnPAOegQIPBAA..i&w=640&h=640&hcb=2&ved=2ahUKEwjCzKG-mZuWAxWFTGwGHVjzGEMQnPAOegQIPBAA",
     isLiked: false
   },
   {
     id: 47,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Mahiya Mahiya (HD) Video Song  Awarapan Movie  Mrinalini Sharma, Emraan Hashmi  Hindi Songs",
+    artist: "Mrinalini Sharma, Emraan Hashmi",
+    src: "songs/Mahiya Mahiya (HD) Video Song  Awarapan Movie  Mrinalini Sharma, Emraan Hashmi  Hindi Songs.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Mahiya%20Mahiya%20(HD)%20Video%20Song%20%20Awarapan%20Movie%20%20Mrinalini%20Sharma%2C%20Emraan%20Hashmi%20%20Hindi%20Songs&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FPSZZbcIttzg%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLDHeEGrjyrz-8MI2cxsLbO_W3lLMg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DPSZZbcIttzg&docid=BSL-CKsW4M2x8M&tbnid=ncnN-4egxbwTLM&vet=12ahUKEwjkhd3WmZuWAxXhT2wGHXBcLAEQnPAOegQINxAA..i&w=686&h=386&hcb=2&ved=2ahUKEwjkhd3WmZuWAxXhT2wGHXBcLAEQnPAOegQINxAA",
     isLiked: false
   },
   {
     id: 48,
+    title: "Mar Jaawan Mit Jaawan Lyrical Video Sng  Aashiq Banaya Aapne  Emraan Hashmi, Tanushree Dutta",
+    artist: "Emraan Hashmi, Tanushree Dutta",
+    src: "songs/Mar Jaawan Mit Jaawan Lyrical Video Sng  Aashiq Banaya Aapne  Emraan Hashmi, Tanushree Dutta.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Mar%20Jaawan%20Mit%20Jaawan%20Lyrical%20Video%20Sng%20%20Aashiq%20Banaya%20Aapne%20%20Emraan%20Hashmi%2C%20Tanushree%20Dutta&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FRRXyD89Mqyc%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRRXyD89Mqyc&docid=WTiqY48celsHHM&tbnid=PDLUu87G5OzDoM&vet=12ahUKEwjTnND2mZuWAxUSSmwGHdLCM7AQnPAOegQIQhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjTnND2mZuWAxUSSmwGHdLCM7AQnPAOegQIQhAA",
+    isLiked: false
+  },
+  {
+    id: 49,
+    title: "Mera Mann Kehne Laga Full Song with Lyrics  Nautanki Saala  Ayushmann Khurrana,Kunaal Roy Kapur",
+    artist: "Nautanki Saala  Ayushmann Khurrana,Kunaal Roy Kapur",
+    src: "songs/Mera Mann Kehne Laga Full Song with Lyrics  Nautanki Saala  Ayushmann Khurrana,Kunaal Roy Kapur.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Mera%20Mann%20Kehne%20Laga%20Full%20Song%20with%20Lyrics%20%20Nautanki%20Saala%20%20Ayushmann%20Khurrana%2CKunaal%20Roy%20Kapur&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FSBuPjMDPXJU%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DSBuPjMDPXJU&docid=ncVsOuT5E-IH5M&tbnid=zGUsJ3PB34JNAM&vet=12ahUKEwjKuKG-mpuWAxXDT2wGHYzcJIgQnPAOegUIlAEQAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjKuKG-mpuWAxXDT2wGHYzcJIgQnPAOegUIlAEQAA",
+    isLiked: false
+  },
+  {
+    id: 50,
     title: "",
     artist: "",
     src: "",
@@ -396,7 +412,47 @@ const songs = [
     isLiked: false
   },
   {
-    id: 49,
+    id: 51,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 52,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 53,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 54,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 55,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 56,
     title: "",
     artist: "",
     src: "",
