@@ -61,14 +61,30 @@ const songs = [
   },
     {
     id: 7,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Bhalobashar Morshum (ভলবসর মরশম)  X=Prem  Shreya Ghoshal  Sanai  Srijit  SVF",
+    artist: "Shreya Ghoshal  Sanai  Srijit",
+    src: "songs/Bhalobashar Morshum (ভলবসর মরশম)  X=Prem  Shreya Ghoshal  Sanai  Srijit  SVF.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Bhalobashar%20Morshum&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F9T3SypTYidg%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLBDwl335kPDq_VoEdOaeMJui-LWhA&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9T3SypTYidg&docid=BnjHvqIv2Le6XM&tbnid=do3vHOTpGj5mRM&vet=12ahUKEwjNyf7khJqWAxWtWXADHWJ9Kb4QnPAOegQIQxAA..i&w=686&h=386&hcb=2&ved=2ahUKEwjNyf7khJqWAxWtWXADHWJ9Kb4QnPAOegQIQxAA",
     isLiked: false
   },
     {
     id: 8,
+    title: "Bhalobeshe Kono Bhool  Bindaas  Dev  Srabanti  Sayantika  Arindom  Shalmali Kholgade  SVF",
+    artist: "Bindaas  Dev  Srabanti  Sayantika  Arindom  Shalmali Kholgade",
+    src: "songs/Bhalobeshe Kono Bhool  Bindaas  Dev  Srabanti  Sayantika  Arindom  Shalmali Kholgade  SVF.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Bhalobeshe%20Kono%20Bhool&imgurl=https%3A%2F%2Fc.saavncdn.com%2F650%2FBindaas-Original-Motion-Picture-Soundtrack-Bengali-2014-20251216013603-500x500.jpg&imgrefurl=https%3A%2F%2Fwww.jiosaavn.com%2Fsong%2Fbhalobeshe-kono-bhool%2FBF0kXExxeko&docid=z7FOxPuykRrq3M&tbnid=Mu-ofL13e0pdrM&vet=12ahUKEwizssm0hZqWAxXIVWwGHRU8IuAQnPAOegQIShAA..i&w=500&h=500&hcb=2&ved=2ahUKEwizssm0hZqWAxXIVWwGHRU8IuAQnPAOegQIShAAxAA",
+    isLiked: false
+  },
+  {
+    id: 9,
+    title: "Bhalolaage Tomake  Tomake Chai  Bonny  Koushani  Arijit Singh  Anwesshaa  Indraadip Dasgupta",
+    artist: "Bonny  Koushani  Arijit Singh  Anwesshaa  Indraadip Dasgupta",
+    src: "songs/Bhalolaage Tomake  Tomake Chai  Bonny  Koushani  Arijit Singh  Anwesshaa  Indraadip Dasgupta.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Bhalolaage%20Tomake%20Tomake%20Chai&imgurl=https%3A%2F%2Fc.saavncdn.com%2F597%2FTomake-Chai-Original-Motion-Picture-Soundtrack-Bengali-2017-20251112000002-500x500.jpg&imgrefurl=https%3A%2F%2Fwww.jiosaavn.com%2Fsong%2Fbhalolaage-tomake%2FQkUiaxxpW30&docid=CefHaz7CTyW-aM&tbnid=xhGrOBTMH_hnHM&vet=12ahUKEwi7icv6hZqWAxVtS2wGHWpMCYYQnPAOegQIQRAA..i&w=500&h=500&hcb=2&ved=2ahUKEwi7icv6hZqWAxVtS2wGHWpMCYYQnPAOegQIQRAA",
+    isLiked: false
+  },
+  {
+    id: 10,
     title: "",
     artist: "",
     src: "",
@@ -76,7 +92,23 @@ const songs = [
     isLiked: false
   },
   {
-    id: 9,
+    id: 11,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 12,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 13,
     title: "",
     artist: "",
     src: "",
