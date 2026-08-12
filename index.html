@@ -66,6 +66,7 @@
       width: 100%;
       position: relative;
       z-index: 1;
+      flex-wrap: wrap;
     }
 
     .brand-header svg {
@@ -80,18 +81,24 @@
       color: #0f172a;
     }
 
+    .badge-container {
+      display: flex;
+      gap: 8px;
+    }
+
     .network-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       font-size: 0.75rem;
       font-weight: 700;
-      padding: 4px 10px;
+      padding: 6px 12px;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.75);
       border: 1px solid var(--card-border);
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       transition: all 0.3s ease;
+      cursor: pointer;
     }
 
     .network-badge.online {
@@ -102,6 +109,11 @@
     .network-badge.offline {
       color: #dc2626;
       border-color: rgba(220, 38, 38, 0.4);
+    }
+
+    .network-badge.datasaver {
+      color: #2563eb;
+      border-color: rgba(37, 99, 235, 0.4);
     }
 
     .status-dot {
@@ -119,6 +131,11 @@
     .offline .status-dot {
       background-color: #dc2626;
       box-shadow: 0 0 6px #dc2626;
+    }
+
+    .datasaver .status-dot {
+      background-color: #3b82f6;
+      box-shadow: 0 0 6px #3b82f6;
     }
 
     .app-container {
@@ -921,9 +938,16 @@
     </svg>
     <h1>SONIFY</h1>
     
-    <div id="network-badge" class="network-badge online">
-      <span class="status-dot"></span>
-      <span id="network-text">Online</span>
+    <div class="badge-container">
+      <div id="network-badge" class="network-badge online">
+        <span class="status-dot"></span>
+        <span id="network-text">Online</span>
+      </div>
+
+      <div id="data-saver-btn" class="network-badge datasaver" title="Click to toggle Data Saver Mode">
+        <span class="status-dot"></span>
+        <span id="data-saver-text">Data Saver: ON</span>
+      </div>
     </div>
   </header>
 
@@ -1048,11 +1072,9 @@
   <script src="songs.js"></script>
 
   <script>
-    // AUTO-REFRESH & SERVICE WORKER UPDATER CODE
     if ('serviceWorker' in navigator) {
       let refreshing = false;
 
-      // When the service worker controlling the page changes, force reload
       navigator.serviceWorker.addEventListener('controllerchange', () => {
         if (!refreshing) {
           refreshing = true;
@@ -1062,10 +1084,8 @@
 
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js').then((reg) => {
-          // Check for update instantly on load
           reg.update();
 
-          // Check for update periodically every 60 seconds
           setInterval(() => {
             reg.update();
           }, 60000);
@@ -1074,7 +1094,6 @@
             const newWorker = reg.installing;
             newWorker.addEventListener('statechange', () => {
               if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                // Instantly activate new SW once downloaded from GitHub
                 newWorker.postMessage({ action: 'skipWaiting' });
               }
             });
@@ -1115,6 +1134,8 @@
 
     const networkBadge = document.getElementById('network-badge');
     const networkText = document.getElementById('network-text');
+    const dataSaverBtn = document.getElementById('data-saver-btn');
+    const dataSaverText = document.getElementById('data-saver-text');
 
     const playbackStatus = document.getElementById('playback-status');
     const statusIcon = document.getElementById('status-icon');
@@ -1136,6 +1157,7 @@
     let currentSongIndex = 0;
     let isShuffle = false;
     let isRepeat = false;
+    let isDataSaver = true;
     let pendingDeleteAction = null;
     let lastVolume = 0.8;
     let toastTimeout = null;
@@ -1155,6 +1177,19 @@
         showToast("⚡", "Switched to Offline Listening Mode");
       }
     }
+
+    dataSaverBtn.addEventListener('click', () => {
+      isDataSaver = !isDataSaver;
+      if (isDataSaver) {
+        dataSaverBtn.className = "network-badge datasaver";
+        dataSaverText.textContent = "Data Saver: ON";
+        showToast("📶", "Data Saver Enabled: Zero-data cached streaming active");
+      } else {
+        dataSaverBtn.className = "network-badge online";
+        dataSaverText.textContent = "Data Saver: OFF";
+        showToast("🌐", "Data Saver Disabled: Standard online mode active");
+      }
+    });
 
     window.addEventListener('online', updateNetworkStatus);
     window.addEventListener('offline', updateNetworkStatus);

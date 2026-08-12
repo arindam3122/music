@@ -1,7 +1,8 @@
-// Change this version name whenever you push a new code update to GitHub
-const CACHE_NAME = 'sonify-v1.0.1';
+// Version definition
+const CACHE_NAME = 'sonify-v1.1.0';
+const AUDIO_CACHE = 'sonify-audio-v1';
 
-// Add the core assets you want available offline
+// Core Application Assets
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -9,41 +10,70 @@ const ASSETS_TO_CACHE = [
   './sw.js'
 ];
 
-// 1. Install Event: Caches essential assets
+// 1. Install Event: Pre-cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[ServiceWorker] Pre-caching offline assets');
+      console.log('[ServiceWorker] Pre-caching offline application shell');
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
 });
 
-// 2. Activate Event: Cleans up old cache versions immediately upon update
+// 2. Activate Event: Clean up outdated caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cache) => {
-          if (cache !== CACHE_NAME) {
+          if (cache !== CACHE_NAME && cache !== AUDIO_CACHE) {
             console.log('[ServiceWorker] Deleting old cache:', cache);
             return caches.delete(cache);
           }
         })
       );
-    }).then(() => self.clients.claim()) // Takes control of all open pages immediately
+    }).then(() => self.clients.claim())
   );
 });
 
-// 3. Fetch Event: Network-first strategy (tries fetching fresh data, falls back to cache if offline)
+// 3. Fetch Event: Smart Data Saver Audio Cache Engine + Network-First Fallback Strategy
 self.addEventListener('fetch', (event) => {
-  // Only handle GET requests
   if (event.request.method !== 'GET') return;
 
+  const request = event.request;
+  const url = request.url;
+
+  // INTERCEPT AUDIO REQUESTS (.mp3, .opus, or destination 'audio') FOR 0-DATA REPLAYS
+  if (request.destination === 'audio' || url.endsWith('.mp3') || url.endsWith('.opus') || url.includes('/songs/')) {
+    event.respondWith(
+      caches.open(AUDIO_CACHE).then(async (audioCache) => {
+        const cachedAudio = await audioCache.match(request);
+        
+        if (cachedAudio) {
+          // Serve immediately from local device cache (Consumes 0 KB internet data)
+          return cachedAudio;
+        }
+
+        try {
+          const networkResponse = await fetch(request);
+          if (networkResponse && networkResponse.status === 200) {
+            // Save full audio file to local storage during first streaming session
+            audioCache.put(request, networkResponse.clone());
+          }
+          return networkResponse;
+        } catch (err) {
+          // Handle completely offline state
+          return cachedAudio || Promise.reject('Offline and track not cached');
+        }
+      })
+    );
+    return;
+  }
+
+  // STANDARD APPLICATION ASSETS
   event.respondWith(
     fetch(event.request)
       .then((networkResponse) => {
-        // If network request succeeds, clone and update cache
         if (networkResponse && networkResponse.status === 200) {
           const responseToCache = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
@@ -53,13 +83,12 @@ self.addEventListener('fetch', (event) => {
         return networkResponse;
       })
       .catch(() => {
-        // If network fails (offline), load from cache
         return caches.match(event.request);
       })
   );
 });
 
-// 4. Message Event: Listens for the 'skipWaiting' command sent by index.html to force instant auto-refresh
+// 4. Force Update Handler
 self.addEventListener('message', (event) => {
   if (event.data && event.data.action === 'skipWaiting') {
     self.skipWaiting();
