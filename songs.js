@@ -197,6 +197,38 @@ const songs = [
   },
   {
     id: 24,
+    title: "Egiye de  Shudhu Tomari Jonyo  Dev  Srabanti  Arijit Singh  Madhubanti Bagchi  Arindom  SVF",
+    artist: "Dev  Srabanti  Arijit Singh  Madhubanti Bagchi  Arindom",
+    src: "songs/Egiye de  Shudhu Tomari Jonyo  Dev  Srabanti  Arijit Singh  Madhubanti Bagchi  Arindom  SVF.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Egiye%20de%20%20Shudhu%20Tomari%20Jonyo&imgurl=https%3A%2F%2Fc.saavncdn.com%2F196%2FShudhu-Tomari-Jonyo-Original-Motion-Picture-Soundtrack-Bengali-2015-20260530013204-500x500.jpg&imgrefurl=https%3A%2F%2Fwww.jiosaavn.com%2Fsong%2Fegiye-de%2FF1olexp6Rls&docid=fJmvZiI1vhNO2M&tbnid=z8mscvQjOAOumM&vet=12ahUKEwiLsYmsuJqWAxV0T2wGHRGiNNAQnPAOegQIbhAA..i&w=500&h=500&hcb=2&ved=2ahUKEwiLsYmsuJqWAxV0T2wGHRGiNNAQnPAOegQIbhAA",
+    isLiked: false
+  },
+  {
+    id: 25,
+    title: "Ei Bhalo Ei Kharap  Golpo Holeo Shotti  Soham  Mimi  Arijit Singh  Monali Thakur  Indraadip",
+    artist: "Soham  Mimi  Arijit Singh  Monali Thakur  Indraadip",
+    src: "songs/Ei Bhalo Ei Kharap  Golpo Holeo Shotti  Soham  Mimi  Arijit Singh  Monali Thakur  Indraadip.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Ei%20Bhalo%20Ei%20Kharap%20%20Golpo%20Holeo%20Shotti&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FU2xrwSBJjGM%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DU2xrwSBJjGM&docid=4G2ZvA9HSQE-lM&tbnid=aIxYZas3YNz6AM&vet=12ahUKEwjY-_PTuJqWAxUQTWwGHTXXC94QnPAOegQIPRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjY-_PTuJqWAxUQTWwGHTXXC94QnPAOegQIPRAA",
+    isLiked: false
+  },
+  {
+    id: 26,
+    title: "Ekta Premer Gaan Likhechi _ Paglu 2 _ Dev _ Koel Mallick _ Jeet Gannguli _ Sujit Mondal [RUGtY2EGGl4]",
+    artist: "Dev _ Koel Mallick _ Jeet Gannguli _ Sujit Mondal",
+    src: "songs/Ekta Premer Gaan Likhechi _ Paglu 2 _ Dev _ Koel Mallick _ Jeet Gannguli _ Sujit Mondal [RUGtY2EGGl4].mp3",
+    imgSrc: "https://www.google.com/imgres?q=Ekta%20Premer%20Gaan%20Likhechi&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FRUGtY2EGGl4%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRUGtY2EGGl4&docid=ahxItc1T_KgSUM&tbnid=BGkG23dYp8LTKM&vet=12ahUKEwjH_cOAuZqWAxUQR2wGHQ7nOSUQnPAOegQIRRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjH_cOAuZqWAxUQR2wGHQ7nOSUQnPAOegQIRRAA",
+    isLiked: false
+  },
+  {
+    id: 27,
+    title: "Eshechi Toke Niye  Paglu  Dev  Koel Mallick  Mohit Chouhan  Jeet Gannguli  Rajib Kumar",
+    artist: "Dev  Koel Mallick  Mohit Chouhan  Jeet Gannguli  Rajib Kumar",
+    src: "songs/Eshechi Toke Niye  Paglu  Dev  Koel Mallick  Mohit Chouhan  Jeet Gannguli  Rajib Kumar.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Eshechi%20Toke%20Niye&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FN3pDIcLo3wQ%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DN3pDIcLo3wQ&docid=3FbsRqVdSOXcqM&tbnid=7Eag3s_vYV_jKM&vet=12ahUKEwi88oPNuZqWAxUDyzgGHRh2GxMQnPAOegQIOxAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwi88oPNuZqWAxUDyzgGHRh2GxMQnPAOegQIOxAA",
+    isLiked: false
+  },
+  {
+    id: 28,
     title: "",
     artist: "",
     src: "",
@@ -204,7 +236,7 @@ const songs = [
     isLiked: false
   },
   {
-    id: 23,
+    id: 29,
     title: "",
     artist: "",
     src: "",
@@ -212,7 +244,7 @@ const songs = [
     isLiked: false
   },
   {
-    id: 23,
+    id: 30,
     title: "",
     artist: "",
     src: "",
@@ -220,7 +252,39 @@ const songs = [
     isLiked: false
   },
   {
-    id: 23,
+    id: 31,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 32,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 33,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 34,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 35,
     title: "",
     artist: "",
     src: "",
