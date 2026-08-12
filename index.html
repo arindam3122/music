@@ -581,12 +581,18 @@
       flex-shrink: 0;
     }
 
+    /* VIRTUAL SCROLL CONTAINER STYLES */
     .playlist {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+      position: relative;
       max-height: 420px;
       overflow-y: auto;
+      width: 100%;
+      will-change: transform;
+      contain: layout paint;
+    }
+
+    .playlist-viewport {
+      position: relative;
       width: 100%;
     }
 
@@ -599,6 +605,10 @@
     }
 
     .playlist-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -607,11 +617,8 @@
       background: rgba(255, 255, 255, 0.6);
       border: 1px solid rgba(255, 255, 255, 0.8);
       cursor: pointer;
-      width: 100%;
-      min-height: 64px;
+      height: 64px;
       transition: background 0.2s, box-shadow 0.2s;
-      content-visibility: auto;
-      contain-intrinsic-size: 64px;
     }
 
     .playlist-item:hover {
@@ -1035,7 +1042,9 @@
         </select>
       </div>
 
-      <div class="playlist" id="playlist"></div>
+      <div class="playlist" id="playlist">
+        <div class="playlist-viewport" id="playlist-viewport"></div>
+      </div>
     </div>
   </div>
 
@@ -1122,6 +1131,7 @@
     const currentTimeEl = document.getElementById('current-time');
     const durationEl = document.getElementById('duration');
     const playlistEl = document.getElementById('playlist');
+    const playlistViewport = document.getElementById('playlist-viewport');
     const likeBtn = document.getElementById('like-btn');
     const volumeSlider = document.getElementById('volume');
     const volumePercentEl = document.getElementById('volume-percent');
@@ -1162,10 +1172,12 @@
     let lastVolume = 0.8;
     let toastTimeout = null;
 
-    let currentChunk = 30;
     let searchDebounceTimer = null;
-
     let customPlaylists = {}; 
+
+    // VIRTUAL SCROLL CONSTANTS
+    const ITEM_HEIGHT = 72; // Item height + gap spacing
+    const BUFFER_SIZE = 5;   // Extra elements rendered above and below viewport
 
     function updateNetworkStatus() {
       if (navigator.onLine) {
@@ -1410,7 +1422,6 @@
       createPlaylistBtn.disabled = true;
       renderPlaylistOptions();
       playlistSelect.value = name;
-      currentChunk = 30;
       renderPlaylist();
       showToast("📂", `Created playlist "${name}"`);
     }
@@ -1439,7 +1450,7 @@
 
     playlistSelect.addEventListener('change', () => {
       deletePlaylistBtn.style.display = (playlistSelect.value !== 'all' && playlistSelect.value !== 'fav') ? 'block' : 'none';
-      currentChunk = 30;
+      playlistEl.scrollTop = 0;
       renderPlaylist();
     });
 
@@ -1461,7 +1472,6 @@
           delete customPlaylists[current];
           showToast("🗑️", `Deleted playlist "${current}"`);
           playlistSelect.value = 'all';
-          currentChunk = 30;
           renderPlaylistOptions();
           renderPlaylist();
         });
@@ -1518,13 +1528,13 @@
     searchBar.addEventListener('input', () => {
       clearTimeout(searchDebounceTimer);
       searchDebounceTimer = setTimeout(() => {
-        currentChunk = 30;
+        playlistEl.scrollTop = 0;
         renderPlaylist();
-      }, 200);
+      }, 150);
     });
 
     sortSelect.addEventListener('change', () => {
-      currentChunk = 30;
+      playlistEl.scrollTop = 0;
       renderPlaylist();
     });
 
@@ -1590,24 +1600,39 @@
       return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
     }
 
+    // HIGH-PERFORMANCE DOM VIRTUALIZATION ENGINE
     function renderPlaylist() {
       renderPlaylistOptions();
       const listToRender = getFilteredAndSortedList();
-      playlistEl.innerHTML = '';
+      playlistViewport.innerHTML = '';
 
       if (listToRender.length === 0) {
-        playlistEl.innerHTML = `<div class="empty-msg">No songs found in this view</div>`;
+        playlistViewport.style.height = '0px';
+        playlistViewport.innerHTML = `<div class="empty-msg">No songs found in this view</div>`;
         return;
       }
 
-      const visibleSongs = listToRender.slice(0, currentChunk);
+      const totalHeight = listToRender.length * ITEM_HEIGHT;
+      playlistViewport.style.height = `${totalHeight}px`;
+
+      const scrollTop = playlistEl.scrollTop;
+      const clientHeight = playlistEl.clientHeight || 420;
+
+      let startIndex = Math.floor(scrollTop / ITEM_HEIGHT) - BUFFER_SIZE;
+      let endIndex = Math.ceil((scrollTop + clientHeight) / ITEM_HEIGHT) + BUFFER_SIZE;
+
+      startIndex = Math.max(0, startIndex);
+      endIndex = Math.min(listToRender.length, endIndex);
+
       const isCustomView = customPlaylists[playlistSelect.value] !== undefined;
       const fragment = document.createDocumentFragment();
 
-      visibleSongs.forEach((song) => {
+      for (let i = startIndex; i < endIndex; i++) {
+        const song = listToRender[i];
         const item = document.createElement('div');
         item.className = `playlist-item ${typeof songs !== 'undefined' && song.id === songs[currentSongIndex]?.id ? 'active' : ''}`;
         item.dataset.id = song.id;
+        item.style.transform = `translateY(${i * ITEM_HEIGHT}px)`;
 
         item.innerHTML = `
           <img src="${sanitizeImageUrl(song.imgSrc)}" class="playlist-thumb" alt="thumb" loading="lazy" onerror="this.onerror=null;this.src='${DEFAULT_COVER}';" />
@@ -1625,18 +1650,19 @@
         `;
 
         fragment.appendChild(item);
-      });
+      }
 
-      playlistEl.appendChild(fragment);
+      playlistViewport.appendChild(fragment);
     }
 
+    let isVirtualScrolling = false;
     playlistEl.addEventListener('scroll', () => {
-      if (playlistEl.scrollTop + playlistEl.clientHeight >= playlistEl.scrollHeight - 60) {
-        const totalAvailable = getFilteredAndSortedList().length;
-        if (currentChunk < totalAvailable) {
-          currentChunk += 20;
+      if (!isVirtualScrolling) {
+        window.requestAnimationFrame(() => {
           renderPlaylist();
-        }
+          isVirtualScrolling = false;
+        });
+        isVirtualScrolling = true;
       }
     });
 
