@@ -280,28 +280,65 @@
       justify-content: center;
     }
 
-    .btn:hover {
-      color: #0f172a;
+    /* --- Modern Prev & Next Buttons Styling (With Borders) --- */
+    .btn-secondary {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.75);
+      border: 1.5px solid rgba(203, 213, 225, 0.8);
+      color: #475569;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
     }
 
-    .btn-secondary {
-      width: 36px;
-      height: 36px;
+    .btn-secondary:hover {
+      color: var(--spotify-green-hover);
+      background: #ffffff;
+      transform: translateY(-2px) scale(1.06);
+      border-color: rgba(16, 185, 129, 0.6);
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.25), 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-secondary:active {
+      transform: translateY(0) scale(0.95);
+      border-color: var(--spotify-green);
+      box-shadow: 0 2px 6px rgba(16, 185, 129, 0.2);
+    }
+
+    .btn-secondary svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    #prev:hover svg {
+      transform: translateX(-2px);
+    }
+
+    #next:hover svg {
+      transform: translateX(2px);
     }
 
     .btn-play {
       background-color: var(--spotify-green);
+      border: 2px solid rgba(255, 255, 255, 0.8);
       color: #ffffff;
       width: 48px;
       height: 48px;
       border-radius: 50%;
       font-size: 1.1rem;
       box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+      transition: all 0.25s ease;
     }
 
     .btn-play:hover {
       background-color: var(--spotify-green-hover);
       transform: scale(1.05);
+      border-color: #ffffff;
     }
 
     .volume-container {
@@ -383,7 +420,7 @@
     .create-btn {
       background: var(--spotify-green);
       color: #ffffff;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.5);
       font-weight: 700;
       font-size: 0.82rem;
       padding: 0 14px;
@@ -401,6 +438,7 @@
     .create-btn:disabled {
       background: #cbd5e1;
       color: #94a3b8;
+      border-color: transparent;
       cursor: not-allowed;
       opacity: 0.8;
       box-shadow: none;
@@ -474,7 +512,6 @@
       border-radius: 4px;
     }
 
-    /* Fixed playlist item & text layout */
     .playlist-item {
       display: flex;
       align-items: center;
@@ -839,7 +876,7 @@
 
       <div class="controls">
         <button class="btn btn-secondary" id="prev" aria-label="Previous">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
         </button>
 
         <button class="btn btn-play" id="play" aria-label="Play/Pause">
@@ -847,7 +884,7 @@
         </button>
 
         <button class="btn btn-secondary" id="next" aria-label="Next">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12h-2zM16 6v12h2V6h-2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6z"/></svg>
         </button>
       </div>
 

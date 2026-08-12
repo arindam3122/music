@@ -85,26 +85,26 @@ const songs = [
   },
   {
     id: 10,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Bheege Hoth Tere Pyasa Dil Mera LYRICS   Murder   Kunal Ganjawala   Emraan Hashmi,Mallika Sherawat 1",
+    artist: "Kunal Ganjawala   Emraan Hashmi,Mallika Sherawat",
+    src: "songs/Bheege Hoth Tere Pyasa Dil Mera LYRICS   Murder   Kunal Ganjawala   Emraan Hashmi,Mallika Sherawat 1.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Bheege%20Hoth%20Tere%20Pyasa%20Dil%20Mera%20cover&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FojUTswFMjyM%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DojUTswFMjyM&docid=ERYX83FSze-7WM&tbnid=aUQA6r3yPzjqZM&vet=12ahUKEwj2vuykh5qWAxW2T2wGHSUnDzsQnPAOegQIPRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwj2vuykh5qWAxW2T2wGHSUnDzsQnPAOegQIPRAA",
     isLiked: false
   },
   {
     id: 11,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Bojhena Shey Bojhena (বঝন স বঝন)  Title Track Soham Abir  Payel Mimi  Arijit Singh SVF",
+    artist: "Soham Abir  Payel Mimi  Arijit Singh",
+    src: "songs/Bojhena Shey Bojhena (বঝন স বঝন)  Title Track Soham Abir  Payel Mimi  Arijit Singh SVF.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Bojhena%20Shey%20Bojhena%20(%E0%A6%AC%E0%A6%9D%E0%A6%A8%20%E0%A6%B8%20%E0%A6%AC%E0%A6%9D%E0%A6%A8)%20%20Title%20Track%20Soham%20Abir%20%20Payel%20Mimi%20%20Arijit%20Singh%20SVF&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FJY43PceHMq4%2Fsddefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DJY43PceHMq4&docid=f2dwzuW1zKMnvM&tbnid=-nybILWyN__iEM&vet=12ahUKEwj2qJP0h5qWAxWwRmwGHb17ETEQnPAOegQIRBAA..i&w=640&h=480&hcb=2&ved=2ahUKEwj2qJP0h5qWAxWwRmwGHb17ETEQnPAOegQIRBAA",
     isLiked: false
   },
   {
     id: 12,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Cham Cham Full Video  BAAGHI  Tiger Shroff, Shraddha Kapoor Meet Bros, Monali Thakur Sabbir Khan",
+    artist: "Tiger Shroff, Shraddha Kapoor, Meet Bros, Monali Thakur, Sabbir Khan",
+    src: "songs/Cham Cham Full Video  BAAGHI  Tiger Shroff, Shraddha Kapoor Meet Bros, Monali Thakur Sabbir Khan.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Cham%20Cham%20Full%20Video%20%20BAAGHI%20%20Tiger%20Shroff%2C%20Shraddha%20Kapoor%20Meet%20Bros%2C%20Monali%20Thakur%20Sabbir%20Khan&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FszQBjrJ_6eE%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DszQBjrJ_6eE&docid=BeZed02FFnIBZM&tbnid=NKchdTKUcKFW5M&vet=12ahUKEwiA57egiJqWAxXNdmwGHZ_7KVcQnPAOegQIPRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiA57egiJqWAxXNdmwGHZ_7KVcQnPAOegQIPRAA",
     isLiked: false
   },
   {
