@@ -1048,10 +1048,37 @@
   <script src="songs.js"></script>
 
   <script>
+    // AUTO-REFRESH & SERVICE WORKER UPDATER CODE
     if ('serviceWorker' in navigator) {
+      let refreshing = false;
+
+      // When the service worker controlling the page changes, force reload
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (!refreshing) {
+          refreshing = true;
+          window.location.reload();
+        }
+      });
+
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').then(() => {
-          console.log('Service Worker Registered Successfully');
+        navigator.serviceWorker.register('./sw.js').then((reg) => {
+          // Check for update instantly on load
+          reg.update();
+
+          // Check for update periodically every 60 seconds
+          setInterval(() => {
+            reg.update();
+          }, 60000);
+
+          reg.addEventListener('updatefound', () => {
+            const newWorker = reg.installing;
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // Instantly activate new SW once downloaded from GitHub
+                newWorker.postMessage({ action: 'skipWaiting' });
+              }
+            });
+          });
         }).catch((err) => {
           console.error('Service Worker Registration Failed:', err);
         });
@@ -1198,7 +1225,6 @@
       updateLikeButtonState(song.isLiked);
       highlightPlaylistItem();
 
-      // MEDIA SESSION API: Sync metadata with Mobile Lockscreen / Notification Controls
       if ('mediaSession' in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({
           title: song.title || "Unknown Title",

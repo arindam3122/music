@@ -1,67 +1,67 @@
-// Service Worker: sw.js
-const CACHE_NAME = 'music-player-v1';
+// Change this version name whenever you push a new code update to GitHub
+const CACHE_NAME = 'sonify-v1.0.1';
+
+// Add the core assets you want available offline
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
-  './songs.js'
+  './songs.js',
+  './sw.js'
 ];
 
-// Install Event - Cache Core App Shell
+// 1. Install Event: Caches essential assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
+      console.log('[ServiceWorker] Pre-caching offline assets');
       return cache.addAll(ASSETS_TO_CACHE);
-    }).then(() => self.skipWaiting())
+    })
   );
 });
 
-// Activate Event - Clean old caches
+// 2. Activate Event: Cleans up old cache versions immediately upon update
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => {
+    caches.keys().then((cacheNames) => {
       return Promise.all(
-        keys.map((key) => {
-          if (key !== CACHE_NAME) return caches.delete(key);
+        cacheNames.map((cache) => {
+          if (cache !== CACHE_NAME) {
+            console.log('[ServiceWorker] Deleting old cache:', cache);
+            return caches.delete(cache);
+          }
         })
       );
-    }).then(() => self.clients.claim())
+    }).then(() => self.clients.claim()) // Takes control of all open pages immediately
   );
 });
 
-// Fetch Event - Serve Cache First, then Network, Auto-Cache media files
+// 3. Fetch Event: Network-first strategy (tries fetching fresh data, falls back to cache if offline)
 self.addEventListener('fetch', (event) => {
-  const requestUrl = new URL(event.request.url);
+  // Only handle GET requests
+  if (event.request.method !== 'GET') return;
 
-  // Cache-First strategy for audio, image, and app static files
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-
-      return fetch(event.request).then((networkResponse) => {
-        // Clone and cache media & app assets dynamically as they are loaded
-        if (
-          networkResponse &&
-          networkResponse.status === 200 &&
-          (event.request.destination === 'audio' ||
-           event.request.destination === 'image' ||
-           event.request.destination === 'script' ||
-           requestUrl.pathname.endsWith('.mp3') ||
-           requestUrl.pathname.endsWith('.m4a'))
-        ) {
+    fetch(event.request)
+      .then((networkResponse) => {
+        // If network request succeeds, clone and update cache
+        if (networkResponse && networkResponse.status === 200) {
           const responseToCache = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
             cache.put(event.request, responseToCache);
           });
         }
         return networkResponse;
-      }).catch(() => {
-        // Return fallback if completely offline and not in cache
-        if (event.request.destination === 'image') {
-          return caches.match('https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=500&auto=format&fit=crop');
-        }
-      });
-    })
+      })
+      .catch(() => {
+        // If network fails (offline), load from cache
+        return caches.match(event.request);
+      })
   );
+});
+
+// 4. Message Event: Listens for the 'skipWaiting' command sent by index.html to force instant auto-refresh
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
 });
