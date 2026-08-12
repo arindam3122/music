@@ -125,34 +125,34 @@ const songs = [
   },
   {
     id: 15,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Chupi Chupi (চপ চপ)  Le Halua Le  Lyrical  Hiran  Payel  Mohit  Shreya  Jeet  SVF Music",
+    artist: "Hiran, Payel, Mohit, Shreya, Jeet",
+    src: "songs/Chupi Chupi (চপ চপ)  Le Halua Le  Lyrical  Hiran  Payel  Mohit  Shreya  Jeet  SVF Music.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Chupi%20Chupi%20(%E0%A6%9A%E0%A6%AA%20%E0%A6%9A%E0%A6%AA)%20%20Le%20Halua%20Le%20%20Lyrical%20%20Hiran%20%20Payel%20%20Mohit%20%20Shreya%20%20Jeet%20%20SVF%20Music&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FVLVamYa3Psg%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLAkXOebfsmvv4WwoP_-mhR9lFoqxw&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DVLVamYa3Psg&docid=5ExKT6p-hN2BoM&tbnid=-bpoAfY4VZ0zHM&vet=12ahUKEwi1mIXZkpqWAxXNdmwGHZ_7KVcQnPAOegQIOhAA..i&w=686&h=386&hcb=2&ved=2ahUKEwi1mIXZkpqWAxXNdmwGHZ_7KVcQnPAOegQIOhAA",
     isLiked: false
   },
   {
     id: 16,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Dagabaaz Re Dabangg 2 Full Video Song ᴴᴰ  Salman Khan, Sonakshi Sinha",
+    artist: "Salman Khan, Sonakshi Sinha",
+    src: "songs/Dagabaaz Re Dabangg 2 Full Video Song ᴴᴰ  Salman Khan, Sonakshi Sinha.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Dagabaaz%20Re%20Dabangg%202%20Full%20Video%20Song&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FhOfRdmYWgKg%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLA5eBmS1uN_wFxAwKodwKJue1vWMw&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DhOfRdmYWgKg&docid=uDfb0YUGqYJOYM&tbnid=FTvSxiGecY2W7M&vet=12ahUKEwiypYStk5qWAxUtb2wGHe-5MbwQnPAOegUImAEQAA..i&w=686&h=386&hcb=2&ved=2ahUKEwiypYStk5qWAxUtb2wGHe-5MbwQnPAOegUImAEQAA",
     isLiked: false
   },
   {
     id: 17,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Shyama Aan Baso Vrindavan Mein  Swasti Mehul  Latest Krishna Bhajan",
+    artist: "Swasti Mehul",
+    src: "songs/Shyama Aan Baso Vrindavan Mein  Swasti Mehul  Latest Krishna Bhajan.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Shyama%20Aan%20Baso%20Vrindavan%20Mein&imgurl=https%3A%2F%2Fc.saavncdn.com%2F401%2FShyama-Aan-Baso-Hindi-2022-20220714164649-500x500.jpg&imgrefurl=https%3A%2F%2Fwww.jiosaavn.com%2Fsong%2Fshyama-aan-baso%2FJywISR9jYAQ&docid=VfQ20pprj_h3tM&tbnid=-vrikVTEp9LqfM&vet=12ahUKEwjegKeLlJqWAxXMcmwGHSzEOp4QnPAOegUIhQEQAA..i&w=500&h=500&hcb=2&ved=2ahUKEwjegKeLlJqWAxXMcmwGHSzEOp4QnPAOegUIhQEQAA",
     isLiked: false
   },
   {
     id: 18,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Nitai Chander Dorbare (নিতাই চাঁদের দরবারে) Pousali Banerjee Bhaba Pagla Aalo - Aalo আলো 🪔 (128k)",
+    artist: "Pousali Banerjee, Bhaba Pagla",
+    src: "songs/Nitai Chander Dorbare (নিতাই চাঁদের দরবারে) Pousali Banerjee Bhaba Pagla Aalo - Aalo আলো 🪔 (128k).mp3",
+    imgSrc: "https://www.google.com/imgres?q=Nitai%20Chander%20Dorbare%20(%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A6%BE%E0%A6%87%20%E0%A6%9A%E0%A6%BE%E0%A6%81%E0%A6%A6%E0%A7%87%E0%A6%B0%20%E0%A6%A6%E0%A6%B0%E0%A6%AC%E0%A6%BE%E0%A6%B0%E0%A7%87)&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FgZtIPExifpY%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DgZtIPExifpY&docid=A7nvIKCTfo0zhM&tbnid=QAAXt155dnx-sM&vet=12ahUKEwjWgrvtlJqWAxVySmwGHfOQKsMQnPAOegQIRBAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjWgrvtlJqWAxVySmwGHfOQKsMQnPAOegQIRBAA",
     isLiked: false
   },
   {
