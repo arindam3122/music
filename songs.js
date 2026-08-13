@@ -405,54 +405,190 @@ const songs = [
   },
   {
     id: 50,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Mere Nishaan Full Song  Oh My God   Akshay Kumar, Paresh Rawal  Kailash Kher, Meet Bros Anjjan",
+    artist: "Akshay Kumar, Paresh Rawal  Kailash Kher, Meet Bros Anjjan",
+    src: "songs/Mere Nishaan Full Song  Oh My God   Akshay Kumar, Paresh Rawal  Kailash Kher, Meet Bros Anjjan.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Mere%20Nishaan%20an&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F8c6GRDxa6HQ%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D8c6GRDxa6HQ&docid=WNB5eX7KngXAZM&tbnid=roDp7oHrLxTokM&vet=12ahUKEwiDn9ip1pyWAxXt3jgGHdRkLTkQnPAOegQIShAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiDn9ip1pyWAxXt3jgGHdRkLTkQnPAOegQIShAA",
     isLiked: false
   },
   {
     id: 51,
-    title: "",
+    title: "Mere Sapno Ki Rani 4K Song _ मर सपन क रन  आरधन  रजश खनन - शरमल टगर - कशर कमर",
     artist: "",
-    src: "",
-    imgSrc: "",
+    src: "songs/Mere Sapno Ki Rani 4K Song _ मर सपन क रन  आरधन  रजश खनन - शरमल टगर - कशर कमर.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Mere%20Sapno%20Ki%20Rani%204K%20Song%20_%20%E0%A4%AE%E0%A4%B0%20%E0%A4%B8%E0%A4%AA%E0%A4%A8%20%E0%A4%95%20%E0%A4%B0%E0%A4%A8%20%20%E0%A4%86%E0%A4%B0%E0%A4%A7%E0%A4%A8%20%20%E0%A4%B0%E0%A4%9C%E0%A4%B6%20%E0%A4%96%E0%A4%A8%E0%A4%A8%20-%20%E0%A4%B6%E0%A4%B0%E0%A4%AE%E0%A4%B2%20%E0%A4%9F%E0%A4%97%E0%A4%B0%20-%20%E0%A4%95%E0%A4%B6%E0%A4%B0%20%E0%A4%95%E0%A4%AE%E0%A4%B0&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F3-_g8mXTutQ%2Fsddefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3-_g8mXTutQ&docid=zbiTTan5GQfvCM&tbnid=4uEcZg-Q3GgsfM&vet=12ahUKEwjn_qjP1pyWAxU29zgGHXc9EHsQnPAOegQIPhAA..i&w=640&h=480&hcb=2&ved=2ahUKEwjn_qjP1pyWAxU29zgGHXc9EHsQnPAOegQIPhAA",
     isLiked: false
   },
   {
     id: 52,
-    title: "",
+    title: "Musu Musu Full Video - Pyaar Mein Kabhi KabhiDino Morea,RinkeShaanVishal Dadlani",
     artist: "",
-    src: "",
-    imgSrc: "",
+    src: "songs/Musu Musu Full Video - Pyaar Mein Kabhi KabhiDino Morea,RinkeShaanVishal Dadlani.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Musu%20Musu%20Full%20Video%20-%20Pyaar%20Mein%20Kabhi%20KabhiDino%20Morea%2CRinkeShaanVishal%20Dadlani&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fvr1si6G3JeM%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dvr1si6G3JeM&docid=cxM_3s5OQdHCUM&tbnid=uVYp3Nr8c9k4rM&vet=12ahUKEwiitY371pyWAxXTxDgGHdmKH3YQnPAOegQIKxAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiitY371pyWAxXTxDgGHdmKH3YQnPAOegQIKxAA",
     isLiked: false
   },
   {
     id: 53,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Namaste Narasimhaya  Narasimha Arati Kirtan  Bhakti Charu Swami",
+    artist: "Bhakti Charu Swami",
+    src: "songs/Namaste Narasimhaya  Narasimha Arati Kirtan  Bhakti Charu Swami.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Namaste%20Narasimhaya%20%20Narasimha%20Arati%20Kirtan%20%20Bhakti%20Charu%20Swami&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FVFQOVZeB8CM%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLDARyx8qzg7S6DvtUB_Vc5FI3MENA&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DETgOxIXLATI&docid=De3wlLcZf4c05M&tbnid=SBbjknUU8G0v_M&vet=12ahUKEwio8_6d15yWAxVB3TgGHWvwEnIQnPAOegQIORAA..i&w=686&h=386&hcb=2&ved=2ahUKEwio8_6d15yWAxVB3TgGHWvwEnIQnPAOegQIORAA",
     isLiked: false
   },
   {
     id: 54,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Nitai Chander Dorbare (নিতাই চাঁদের দরবারে) Pousali Banerjee Bhaba Pagla Aalo - Aalo আলো 🪔 (128k)",
+    artist: "Pousali Banerjee",
+    src: "songs/Nitai Chander Dorbare (নিতাই চাঁদের দরবারে) Pousali Banerjee Bhaba Pagla Aalo - Aalo আলো 🪔 (128k).mp3",
+    imgSrc: "https://www.google.com/imgres?q=Nitai%20Chander%20Dorbare%20(%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A6%BE%E0%A6%87%20%E0%A6%9A%E0%A6%BE%E0%A6%81%E0%A6%A6%E0%A7%87%E0%A6%B0%20%E0%A6%A6%E0%A6%B0%E0%A6%AC%E0%A6%BE%E0%A6%B0%E0%A7%87)%20Pousali%20Banerjee%20Bhaba%20Pagla%20Aalo%20-%20Aalo%20%E0%A6%86%E0%A6%B2%E0%A7%8B%20%F0%9F%AA%94%20(128k)&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FgZtIPExifpY%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DgZtIPExifpY&docid=A7nvIKCTfo0zhM&tbnid=QAAXt155dnx-sM&vet=12ahUKEwiPlPm715yWAxXs1jgGHW8QNIsQnPAOegQIRRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiPlPm715yWAxXs1jgGHW8QNIsQnPAOegQIRRAA",
     isLiked: false
   },
   {
     id: 55,
+    title: "Oh Mama! TETEMA (Song) Rayvanny, Nora Fatehi  ShreyaGhoshal, Vishal Mishra, Sanjoy Bhushan K",
+    artist: "Shreya Ghoshal, Vishal Mishra, Sanjoy Bhushan K",
+    src: "songs/Oh Mama! TETEMA (Song) Rayvanny, Nora Fatehi  ShreyaGhoshal, Vishal Mishra, Sanjoy Bhushan K.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Oh%20Mama!%20TETEMA%20(Song)%20Rayvanny%2C%20Nora%20Fatehi%20%20ShreyaGhoshal%2C%20Vishal%20Mishra%2C%20Sanjoy%20Bhushan%20K&imgurl=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d0000b273c019f17563fcc8cc9db655c2&imgrefurl=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F6LWd4TAkJt6kfHIQatolHP&docid=LwYIYeL6A_jHZM&tbnid=eXM_hXwyCCwz6M&vet=12ahUKEwiR6Y_V15yWAxUJ8jgGHfGPLa8QnPAOegUInwEQAA..i&w=640&h=640&hcb=2&ved=2ahUKEwiR6Y_V15yWAxUJ8jgGHfGPLa8QnPAOegUInwEQAA",
+    isLiked: false
+  },
+  {
+    id: 56,
+    title: "Oviman  অভমন  Tanveer Evan  Piran Khan  Jovan  Mehazabien  Best Friend 3 Drama Song",
+    artist: "",
+    src: "songs/Oviman  অভমন  Tanveer Evan  Piran Khan  Jovan  Mehazabien  Best Friend 3 Drama Song.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Oviman%20%20%E0%A6%85%E0%A6%AD%E0%A6%AE%E0%A6%A8%20%20Tanveer%20Evan%20%20Piran%20Khan%20%20Jovan%20%20Mehazabien%20%20Best%20Friend%203%20Drama%20Song&imgurl=https%3A%2F%2Fc.saavncdn.com%2F376%2FOviman-From-Best-friend-3--Bengali-2021-20210316123306-500x500.jpg&imgrefurl=https%3A%2F%2Fwww.jiosaavn.com%2Falbum%2Foviman-from-best-friend-3%2FVKYMgVEWKAU_&docid=XUJPN2XXVbkjGM&tbnid=bOS0GKYuFkppmM&vet=12ahUKEwiGmaPq15yWAxUCxjgGHR6IJyoQnPAOegQIPxAA..i&w=500&h=500&hcb=2&ved=2ahUKEwiGmaPq15yWAxUCxjgGHR6IJyoQnPAOegQIPxAA",
+    isLiked: false
+  },
+  {
+    id: 57,
+    title: "Palat Tera Hero Idhar Hai (Full Video) Song Main Tera Hero  Arijit Singh  Varun Dhawan",
+    artist: "Arijit Singh  Varun Dhawan",
+    src: "songs/Palat Tera Hero Idhar Hai (Full Video) Song Main Tera Hero  Arijit Singh  Varun Dhawan.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Palat%20Tera%20Hero%20Idhar%20Hai%20(Full%20Video)%20Song%20Main%20Tera%20Hero%20%20Arijit%20Singh%20%20Varun%20Dhawan&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F9vkcYxbGdTE%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9vkcYxbGdTE&docid=0vYfVNncRu1TkM&tbnid=H1HomyZgxnkW0M&vet=12ahUKEwjIp4HB2JyWAxVp6zgGHU1MAM0QnPAOegQINBAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjIp4HB2JyWAxVp6zgGHU1MAM0QnPAOegQINBAA",
+    isLiked: false
+  },
+    {
+    id: 58,
+    title: "Parbona Ami Charte Toke - Lyrical  Title Track  Bonny  Koushani  Arijit  Indraadip  Raj C SVF",
+    artist: "Bonny  Koushani  Arijit  Indraadip  Raj C",
+    src: "songs/Parbona Ami Charte Toke - Lyrical  Title Track  Bonny  Koushani  Arijit  Indraadip  Raj C SVF.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Parbona%20Ami%20Charte%20Toke%20-%20Lyrical%20%20Title%20Track%20%20Bonny%20%20Koushani%20%20Arijit%20%20Indraadip%20%20Raj%20C%20SVF&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fzo3jN2UjMVQ%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dzo3jN2UjMVQ&docid=UBbqlwN3EZKpZM&tbnid=wssy488QvluAYM&vet=12ahUKEwjVo9bZ2JyWAxVfwTgGHWTfEGcQnPAOegQIQhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjVo9bZ2JyWAxVfwTgGHWTfEGcQnPAOegQIQhAA",
+    isLiked: false
+  },
+    {
+    id: 59,
+    title: "Pehla Pehla Pyaar with lyrics  पहल पहल पयर  Hum Aapke Hai Kon  Salman Khan  Madhuri Dixit",
+    artist: "Salman Khan  Madhuri Dixit",
+    src: "songs/Pehla Pehla Pyaar with lyrics  पहल पहल पयर  Hum Aapke Hai Kon  Salman Khan  Madhuri Dixit.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Pehla%20Pehla%20Pyaar%20with%20lyrics%20%20%E0%A4%AA%E0%A4%B9%E0%A4%B2%20%E0%A4%AA%E0%A4%B9%E0%A4%B2%20%E0%A4%AA%E0%A4%AF%E0%A4%B0%20%20Hum%20Aapke%20Hai%20Kon%20%20Salman%20Khan%20%20Madhuri%20Dixit&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FGAYU-oUcEU0%2Fsddefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGAYU-oUcEU0&docid=uhDNdah1_8Ih0M&tbnid=-_AJq1zjgYAuOM&vet=12ahUKEwjFjeqA2ZyWAxUH3TgGHaIUNKAQnPAOegQIRBAA..i&w=640&h=480&hcb=2&ved=2ahUKEwjFjeqA2ZyWAxUH3TgGHaIUNKAQnPAOegQIRBAA",
+    isLiked: false
+  },
+    {
+    id: 60,
     title: "",
     artist: "",
     src: "",
     imgSrc: "",
     isLiked: false
   },
-  {
-    id: 56,
+    {
+    id: 61,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 62,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 63,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 64,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 65,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 66,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 67,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 68,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 69,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 70,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 71,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 72,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 73,
     title: "",
     artist: "",
     src: "",
