@@ -573,18 +573,187 @@ const songs = [
   },
     {
     id: 71,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Tere Vaaste  Full Video  Zara Hatke Zara Bachke  Vicky, Sara, Varun J, Sachin-Jigar, Amitabh B",
+    artist: "Vicky, Sara, Varun J, Sachin-Jigar, Amitabh B",
+    src: "songs/Tere Vaaste  Full Video  Zara Hatke Zara Bachke  Vicky, Sara, Varun J, Sachin-Jigar, Amitabh B.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Tere%20Vaaste%20%20Full%20Video%20%20Zara%20Hatke%20Zara%20Bachke%20%20Vicky%2C%20Sara%2C%20Varun%20J%2C%20Sachin-Jigar%2C%20Amitabh%20B&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FklwqJIAGqMM%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLBbLllbzfyzwfsl4FdN1v9AdXREPg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DklwqJIAGqMM&docid=zabHR04dJAph9M&tbnid=wa-DP61wa16FvM&vet=12ahUKEwiOudCA7ZyWAxXBa2wGHdJbCJoQnPAOegUIsQEQAA..i&w=686&h=386&hcb=2&ved=2ahUKEwiOudCA7ZyWAxXBa2wGHdJbCJoQnPAOegUIsQEQAA",
     isLiked: false
   },
     {
     id: 72,
+    title: "Teri Meri Kahaani Hai Baarishon Ka Paani - Arijit Singh  Gabbar Is Back  Akshay Kumar & Kareena K",
+    artist: "Arijit Singh",
+    src: "songs/Teri Meri Kahaani Hai Baarishon Ka Paani - Arijit Singh  Gabbar Is Back  Akshay Kumar & Kareena K.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Teri%20Meri%20Kahaani%20Hai%20Baarishon%20Ka%20Paani%20-%20Arijit%20Singh%20%20Gabbar%20Is%20Back%20%20Akshay%20Kumar%20%26%20Kareena%20K&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FZWAGn4yyRMM%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLA4kSh5EGvsbwXFeH0uvSeEE18Y6g&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DZWAGn4yyRMM&docid=xq4e9FwzAXiEEM&tbnid=9LnjHnzCRewviM&vet=12ahUKEwj9sprT7ZyWAxVTamwGHXanBPkQnPAOegQIRhAA..i&w=686&h=386&hcb=2&ved=2ahUKEwj9sprT7ZyWAxVTamwGHXanBPkQnPAOegQIRhAA",
+    isLiked: false
+  },
+  {
+    id: 73,
+    title: "Thik Jeno Love Story (Title Song) - Arindom, Prashmita Full HD Audio Song with Lyrics Star Jalsha",
+    artist: "Arindom, Prashmita",
+    src: "songs/Thik Jeno Love Story (Title Song) - Arindom, Prashmita Full HD Audio Song with Lyrics Star Jalsha.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Thik%20Jeno%20Love%20Story%20(Title%20Song)%20-%20Arindom%2C%20Prashmita%20Full%20HD%20Audio%20Song%20with%20Lyrics%20Star%20Jalsha&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FV0J7UO4xX9Q%2Fsddefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DV0J7UO4xX9Q&docid=8L_tp2xI9dWFhM&tbnid=xQa2ZLVLBtPB-M&vet=12ahUKEwiGqaWz7pyWAxVH1zgGHVvDDEwQnPAOegUIqgEQAA..i&w=640&h=480&hcb=2&ved=2ahUKEwiGqaWz7pyWAxVH1zgGHVvDDEwQnPAOegUIqgEQAA",
+    isLiked: false
+  },
+  {
+    id: 74,
+    title: "Tomake Chai (তমক চই )  Gangster  Arijit Singh  Arindom  Yash  Mimi  Birsa Dasgupta  SVF",
+    artist: "Arijit Singh  Arindom  Yash  Mimi  Birsa Dasgupta",
+    src: "songs/Tomake Chai (তমক চই )  Gangster  Arijit Singh  Arindom  Yash  Mimi  Birsa Dasgupta  SVF.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Tomake%20Chai%20(%E0%A6%A4%E0%A6%AE%E0%A6%95%20%E0%A6%9A%E0%A6%87%20)%20%20Gangster%20%20Arijit%20Singh%20%20Arindom%20%20Yash%20%20Mimi%20%20Birsa%20Dasgupta%20%20SVF&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FSzsbcLBb9to%2Fsddefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DSzsbcLBb9to&docid=Syfgynbm-6InqM&tbnid=zuFS5jQ0S0_ifM&vet=12ahUKEwig_ZXM7pyWAxUzxzgGHfiBKyMQnPAOegUIngEQAA..i&w=640&h=480&hcb=2&itg=1&ved=2ahUKEwig_ZXM7pyWAxUzxzgGHfiBKyMQnPAOegUIngEQAA",
+    isLiked: false
+  },
+  {
+    id: 75,
+    title: "Tomake Chai Title Track  তমক চই  Bonny  Koushani  Arijit Singh  Indraadip Dasgupta  SVF",
+    artist: "Bonny  Koushani  Arijit Singh  Indraadip Dasgupta",
+    src: "songs/Tomake Chai Title Track  তমক চই  Bonny  Koushani  Arijit Singh  Indraadip Dasgupta  SVF.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Tomake%20Chai%20Title%20Track%20%20%E0%A6%A4%E0%A6%AE%E0%A6%95%20%E0%A6%9A%E0%A6%87%20%20Bonny%20%20Koushani%20%20Arijit%20Singh%20%20Indraadip%20Dasgupta%20%20SVF&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F3mW_-8jGOMs%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3mW_-8jGOMs&docid=Tc5o35t_Ms2NoM&tbnid=hlR7SpEinE7xcM&vet=12ahUKEwjeq4vv7pyWAxUrzDgGHS_FBREQnPAOegQIQBAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjeq4vv7pyWAxUrzDgGHS_FBREQnPAOegQIQBAA",
+    isLiked: false
+  },
+  {
+    id: 76,
     title: "",
     artist: "",
     src: "",
     imgSrc: "",
     isLiked: false
   },
+  {
+    id: 77,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 78,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 79,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 80,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 81,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 82,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 83,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 84,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 85,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 86,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 87,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 88,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 89,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 90,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 91,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 92,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 93,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+
 ];
