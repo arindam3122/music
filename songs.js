@@ -437,14 +437,6 @@ const songs = [
   },
   {
     id: 54,
-    title: "Nitai Chander Dorbare (নিতাই চাঁদের দরবারে) Pousali Banerjee Bhaba Pagla Aalo - Aalo আলো 🪔 (128k)",
-    artist: "Pousali Banerjee",
-    src: "songs/Nitai Chander Dorbare (নিতাই চাঁদের দরবারে) Pousali Banerjee Bhaba Pagla Aalo - Aalo আলো 🪔 (128k).mp3",
-    imgSrc: "https://www.google.com/imgres?q=Nitai%20Chander%20Dorbare%20(%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A6%BE%E0%A6%87%20%E0%A6%9A%E0%A6%BE%E0%A6%81%E0%A6%A6%E0%A7%87%E0%A6%B0%20%E0%A6%A6%E0%A6%B0%E0%A6%AC%E0%A6%BE%E0%A6%B0%E0%A7%87)%20Pousali%20Banerjee%20Bhaba%20Pagla%20Aalo%20-%20Aalo%20%E0%A6%86%E0%A6%B2%E0%A7%8B%20%F0%9F%AA%94%20(128k)&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FgZtIPExifpY%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DgZtIPExifpY&docid=A7nvIKCTfo0zhM&tbnid=QAAXt155dnx-sM&vet=12ahUKEwiPlPm715yWAxXs1jgGHW8QNIsQnPAOegQIRRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiPlPm715yWAxXs1jgGHW8QNIsQnPAOegQIRRAA",
-    isLiked: false
-  },
-  {
-    id: 55,
     title: "Oh Mama! TETEMA (Song) Rayvanny, Nora Fatehi  ShreyaGhoshal, Vishal Mishra, Sanjoy Bhushan K",
     artist: "Shreya Ghoshal, Vishal Mishra, Sanjoy Bhushan K",
     src: "songs/Oh Mama! TETEMA (Song) Rayvanny, Nora Fatehi  ShreyaGhoshal, Vishal Mishra, Sanjoy Bhushan K.mp3",
@@ -452,7 +444,7 @@ const songs = [
     isLiked: false
   },
   {
-    id: 56,
+    id: 55,
     title: "Oviman  অভমন  Tanveer Evan  Piran Khan  Jovan  Mehazabien  Best Friend 3 Drama Song",
     artist: "",
     src: "songs/Oviman  অভমন  Tanveer Evan  Piran Khan  Jovan  Mehazabien  Best Friend 3 Drama Song.mp3",
@@ -460,7 +452,7 @@ const songs = [
     isLiked: false
   },
   {
-    id: 57,
+    id: 56,
     title: "Palat Tera Hero Idhar Hai (Full Video) Song Main Tera Hero  Arijit Singh  Varun Dhawan",
     artist: "Arijit Singh  Varun Dhawan",
     src: "songs/Palat Tera Hero Idhar Hai (Full Video) Song Main Tera Hero  Arijit Singh  Varun Dhawan.mp3",
@@ -468,7 +460,7 @@ const songs = [
     isLiked: false
   },
     {
-    id: 58,
+    id: 57,
     title: "Parbona Ami Charte Toke - Lyrical  Title Track  Bonny  Koushani  Arijit  Indraadip  Raj C SVF",
     artist: "Bonny  Koushani  Arijit  Indraadip  Raj C",
     src: "songs/Parbona Ami Charte Toke - Lyrical  Title Track  Bonny  Koushani  Arijit  Indraadip  Raj C SVF.mp3",
@@ -476,11 +468,19 @@ const songs = [
     isLiked: false
   },
     {
-    id: 59,
+    id: 58,
     title: "Pehla Pehla Pyaar with lyrics  पहल पहल पयर  Hum Aapke Hai Kon  Salman Khan  Madhuri Dixit",
     artist: "Salman Khan  Madhuri Dixit",
     src: "songs/Pehla Pehla Pyaar with lyrics  पहल पहल पयर  Hum Aapke Hai Kon  Salman Khan  Madhuri Dixit.mp3",
     imgSrc: "https://www.google.com/imgres?q=Pehla%20Pehla%20Pyaar%20with%20lyrics%20%20%E0%A4%AA%E0%A4%B9%E0%A4%B2%20%E0%A4%AA%E0%A4%B9%E0%A4%B2%20%E0%A4%AA%E0%A4%AF%E0%A4%B0%20%20Hum%20Aapke%20Hai%20Kon%20%20Salman%20Khan%20%20Madhuri%20Dixit&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FGAYU-oUcEU0%2Fsddefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGAYU-oUcEU0&docid=uhDNdah1_8Ih0M&tbnid=-_AJq1zjgYAuOM&vet=12ahUKEwjFjeqA2ZyWAxUH3TgGHaIUNKAQnPAOegQIRBAA..i&w=640&h=480&hcb=2&ved=2ahUKEwjFjeqA2ZyWAxUH3TgGHaIUNKAQnPAOegQIRBAA",
+    isLiked: false
+  },
+    {
+    id: 59,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
     isLiked: false
   },
     {
@@ -581,14 +581,6 @@ const songs = [
   },
     {
     id: 72,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
-    isLiked: false
-  },
-    {
-    id: 73,
     title: "",
     artist: "",
     src: "",
