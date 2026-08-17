@@ -749,10 +749,10 @@ const songs = [
   },
   {
     id: 93,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Jumme Ki Raat Full Video Song  Salman Khan, Jacqueline Fernandez  Mika Singh  Himesh Reshammiya",
+    artist: "Salman Khan",
+    src: "songs/Jumme Ki Raat Full Video Song  Salman Khan, Jacqueline Fernandez  Mika Singh  Himesh Reshammiya.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Jumme%20Ki%20Raat%20Full%20Video%20Song%20%20Salman%20Khan%2C%20Jacqueline%20Fernandez%20%20Mika%20Singh%20%20Himesh%20Reshammiya&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fdv_Qjzca56k%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Ddv_Qjzca56k&docid=ygCl8wEnM-9cOM&tbnid=VgaSY8iMFtwbNM&vet=12ahUKEwjwweeE16eWAxXLUGwGHefYG1YQnPAOegQIHxAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjwweeE16eWAxXLUGwGHefYG1YQnPAOegQIHxAA",
     isLiked: false
   },
 
