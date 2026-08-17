@@ -773,18 +773,18 @@ const songs = [
   },
   {
     id: 96,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Shundori Komola (সনদর কমল)  Villain  Ankush, Mimi  Armaan, Antara  Subho JAM8 SVF Music",
+    artist: "Ankush, Mimi",
+    src: "songs/Shundori Komola (সনদর কমল)  Villain  Ankush, Mimi  Armaan, Antara  Subho JAM8 SVF Music.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Shundori%20Komola%20(%E0%A6%B8%E0%A6%A8%E0%A6%A6%E0%A6%B0%20%E0%A6%95%E0%A6%AE%E0%A6%B2)%20%20Villain%20%20Ankush%2C%20Mimi%20%20Armaan%2C%20Antara%20%20Subho%20JAM8%20SVF%20Music&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FgwjWIawYyNs%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DgwjWIawYyNs&docid=eL7-Ny5FdLDdfM&tbnid=cCi94mR9mc8xeM&vet=12ahUKEwiKqfDH-6eWAxU9keEIHRgoBmwQnPAOegQIRhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiKqfDH-6eWAxU9keEIHRgoBmwQnPAOegQIRhAA",
     isLiked: false
   },
   {
     id: 97,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Kashmir Main Tu Kanyakumari(Lyrical)Chennai Express Shahrukh K, Deepika P,Sunidhi C,Arijit S,Neeti",
+    artist: "Shahrukh K, Deepika P",
+    src: "songs/Kashmir Main Tu Kanyakumari(Lyrical)Chennai Express Shahrukh K, Deepika P,Sunidhi C,Arijit S,Neeti.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Kashmir%20Main%20Tu%20Kanyakumari(Lyrical)Chennai%20Express%20Shahrukh%20K%2C%20Deepika%20P%2CSunidhi%20C%2CArijit%20S%2CNeeti&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FWxtJqyIyThU%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DWxtJqyIyThU&docid=byh2HkNMo2n4EM&tbnid=Q9Pom19A4ZwUlM&vet=12ahUKEwiOqeHp-6eWAxW3kuEIHR7tMwYQnPAOegQIORAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiOqeHp-6eWAxW3kuEIHR7tMwYQnPAOegQIORAA",
     isLiked: false
   },
   {
