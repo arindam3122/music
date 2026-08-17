@@ -725,26 +725,26 @@ const songs = [
   },
   {
     id: 90,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Fevicol Se Full Video Song Dabangg 2 (Official) ★ Kareena Kapoor ★ Salman Khan",
+    artist: "Kareena Kapoor ★ Salman Khan",
+    src: "songs/Fevicol Se Full Video Song Dabangg 2 (Official) ★ Kareena Kapoor ★ Salman Khan.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Fevicol%20Se%20Full%20Video%20Song%20Dabangg%202%20(Official)%20%E2%98%85%20Kareena%20Kapoor%20%E2%98%85%20Salman%20Khan&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FzE7Pwgl6sLA%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzE7Pwgl6sLA&docid=48vli39JBYB9iM&tbnid=T5V4V4dm_WxMyM&vet=12ahUKEwj93N-CkqeWAxX1amwGHZgFGWkQnPAOegQIPBAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwj93N-CkqeWAxX1amwGHZgFGWkQnPAOegQIPBAA",
     isLiked: false
   },
   {
     id: 91,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Full Video_ YU KARKE_ Dabangg 3 _ Salman Khan, Sonakshi Sinha,Saiee Manjrekar_Payal Dev _Sajid Wajid [jWpGP8_aAVk]",
+    artist: "Salman Khan, Sonakshi Sinha",
+    src: "songs/Full Video_ YU KARKE_ Dabangg 3 _ Salman Khan, Sonakshi Sinha,Saiee Manjrekar_Payal Dev _Sajid Wajid [jWpGP8_aAVk].mp3",
+    imgSrc: "https://www.google.com/imgres?q=Full%20Video_%20YU%20KARKE_%20Dabangg%203%20_%20Salman%20Khan%2C%20Sonakshi%20Sinha%2CSaiee%20Manjrekar_Payal%20Dev%20_Sajid%20Wajid%20%5BjWpGP8_aAVk%5D&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FXYpu-J6M7Io%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLCqsCuoG1xGdPvP681qU24RCrXTWw&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DXYpu-J6M7Io&docid=yYi6w5MwrttPoM&tbnid=xhdXD_0MTFYhQM&vet=12ahUKEwi42vSvkqeWAxXlTmwGHTfeNksQnPAOegQIRhAA..i&w=686&h=386&hcb=2&ved=2ahUKEwi42vSvkqeWAxXlTmwGHTfeNksQnPAOegQIRhAA",
     isLiked: false
   },
   {
     id: 92,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Munni Badnaam Hui Full Song Feat. Malaika Arora Dabangg Salman Khan",
+    artist: "Salman Khan",
+    src: "songs/Munni Badnaam Hui Full Song Feat. Malaika Arora Dabangg Salman Khan.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Munni%20Badnaam%20Hui%20Full%20Song%20Feat.%20Malaika%20Arora%20Dabangg%20Salman%20Khan&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FJn5hsfbhWx4%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DJn5hsfbhWx4&docid=XliHGTQY6oMG2M&tbnid=YdA9VAlmkGvEiM&vet=12ahUKEwjm8OuKk6eWAxUGSWwGHbb5OKQQnPAOegQIQRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjm8OuKk6eWAxUGSWwGHbb5OKQQnPAOegQIQRAA",
     isLiked: false
   },
   {
