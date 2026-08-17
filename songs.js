@@ -765,10 +765,10 @@ const songs = [
   },
   {
     id: 95,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Bondhu Bine Pran Bachena  Debolinaa Nandy  Ft. Neel  Bengali folk  Radharaman Dutta  Dance 2023",
+    artist: "Debolinaa Nandy",
+    src: "songs/Bondhu Bine Pran Bachena  Debolinaa Nandy  Ft. Neel  Bengali folk  Radharaman Dutta  Dance 2023.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Bondhu%20Bine%20Pran%20Bachena%20%20Debolinaa%20Nandy%20%20Ft.%20Neel%20%20Bengali%20folk%20%20Radharaman%20Dutta%20%20Dance%202023&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FGq8gO0now_s%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGq8gO0now_s&docid=sq8acyyfwpNH0M&tbnid=ivBjW4rJrL3O3M&vet=12ahUKEwiZ3Lax7qeWAxVOzDgGHTxjLIYQnPAOegQIPBAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiZ3Lax7qeWAxVOzDgGHTxjLIYQnPAOegQIPBAA",
     isLiked: false
   },
   {
