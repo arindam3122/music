@@ -789,22 +789,46 @@ const songs = [
   },
   {
     id: 98,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Fagunero Mohonaye 2.0  Antara Nandy  Ankita Nandy  Aviman Paul  New Bengali Folk Song 2024",
+    artist: "Antara Nandy  Ankita Nandy",
+    src: "songs/Fagunero Mohonaye 2.0  Antara Nandy  Ankita Nandy  Aviman Paul  New Bengali Folk Song 2024.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Fagunero%20Mohonaye%202.0%20Antara%20Nandy%20Ankita%20Nandy%20Aviman%20Paul%20New%20Bengali%20Folk%20Song%202024&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F47BOJY1sheQ%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D47BOJY1sheQ&docid=sbGL7mNYgM3YyM&tbnid=NTzoLbe2hIjvLM&vet=12ahUKEwiZ1a38uKqWAxUGieEIHXjED3kQnPAOegQIPRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiZ1a38uKqWAxUGieEIHXjED3kQnPAOegQIPRAA",
     isLiked: false
   },
   {
     id: 99,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Aj Shara Bela (Official Video )  Shreya Ghoshal  Bohurupi  Anupam Roy  Ritabhari C  Abir C",
+    artist: "Shreya Ghoshal",
+    src: "songs/Aj Shara Bela (Official Video )  Shreya Ghoshal  Bohurupi  Anupam Roy  Ritabhari C  Abir C.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Aj%20Shara%20Bela%20(Official%20Video%20)%20%20Shreya%20Ghoshal%20%20Bohurupi%20%20Anupam%20Roy%20%20Ritabhari%20C%20%20Abir%20C&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fh73K8pZFSwQ%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dh73K8pZFSwQ&docid=mv4EWx4wsHQx4M&tbnid=vStRQYba_uuVWM&vet=12ahUKEwjrk4-auqqWAxUKWHADHXBCECcQnPAOegQIRRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjrk4-auqqWAxUKWHADHXBCECcQnPAOegQIRRAA",
     isLiked: false
   },
   {
     id: 100,
+    title: "A.R. Rahman - Tere Bina  Lyrical Song  Aishwarya Rai  Abhishek Bachchan  Guru  Gulzar",
+    artist: "Aishwarya Rai  Abhishek Bachchan",
+    src: "songs/A.R. Rahman - Tere Bina  Lyrical Song  Aishwarya Rai  Abhishek Bachchan  Guru  Gulzar.mp3",
+    imgSrc: "https://www.google.com/imgres?q=A.R.%20Rahman%20-%20Tere%20Bina%20%20Lyrical%20Song%20%20Aishwarya%20Rai%20%20Abhishek%20Bachchan%20%20Guru%20%20Gulzar&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F_mwqXnTEHSc%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_mwqXnTEHSc&docid=eE_JZeRsjQzZSM&tbnid=awDczBqcGrG24M&vet=12ahUKEwibg_jVuqqWAxXARmwGHbfcFdEQnPAOegQIPhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwibg_jVuqqWAxXARmwGHbfcFdEQnPAOegQIPhAA",
+    isLiked: false
+  },
+  {
+    id: 101,
+    title: "Dakatiya Banshi ( Official Video )  Bohurupi  Shiboprosad  Koushani  New Bengali Movie Song 2024",
+    artist: "Koushani",
+    src: "songs/Dakatiya Banshi ( Official Video )  Bohurupi  Shiboprosad  Koushani  New Bengali Movie Song 2024.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Dakatiya%20Banshi%20(%20Official%20Video%20)%20%20Bohurupi%20%20Shiboprosad%20%20Koushani%20%20New%20Bengali%20Movie%20Song%202024&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FwF9oo8dJ5t4%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DwF9oo8dJ5t4&docid=7DIM5oZZzAariM&tbnid=XQ76hT8f-6diMM&vet=12ahUKEwj0qPS6u6qWAxVHmeEIHYYVK8sQnPAOegQIOhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwj0qPS6u6qWAxVHmeEIHYYVK8sQnPAOegQIOhAA",
+    isLiked: false
+  },
+  {
+    id: 102,
+    title: "Tumpa  Official Video  Rest in পরম by Arijit Sorkar  Sayan,Sumana,Dipangshu  CONFUSED Picture",
+    artist: "Arijit Sorkar  Sayan,Sumana,Dipangshu",
+    src: "songs/Tumpa  Official Video  Rest in পরম by Arijit Sorkar  Sayan,Sumana,Dipangshu  CONFUSED Picture.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Tumpa%20%20Official%20Video%20%20Rest%20in%20%E0%A6%AA%E0%A6%B0%E0%A6%AE%20by%20Arijit%20Sorkar%20%20Sayan%2CSumana%2CDipangshu%20%20CONFUSED%20Picture&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Foh-btKnbTpY%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Doh-btKnbTpY&docid=N7z2a7xEIQhdmM&tbnid=PbdGeAGFKJ5T1M&vet=12ahUKEwiS69P-vKqWAxVVT2wGHVBRLPYQnPAOegQIQRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiS69P-vKqWAxVVT2wGHVBRLPYQnPAOegQIQRAA",
+    isLiked: false
+  },
+  {
+    id: 103,
     title: "",
     artist: "",
     src: "s",
@@ -812,7 +836,111 @@ const songs = [
     isLiked: false
   },
   {
-    id: 101,
+    id: 104,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 105,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 106,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 107,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 108,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 109,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 110,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 111,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 112,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 113,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 114,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 115,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 116,
+    title: "",
+    artist: "",
+    src: "s",
+    imgSrc: "",
+    isLiked: false
+  },
+  {
+    id: 117,
     title: "",
     artist: "",
     src: "s",
