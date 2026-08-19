@@ -829,34 +829,34 @@ const songs = [
   },
   {
     id: 103,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "First Class  Kalank  Varun Dhawan, Alia Bhatt, Kiara  Arijit Singh  Pritam Amitabh  Full Video",
+    artist: "Alia Bhatt, Kiara  Arijit Singh  Pritam Amitabh",
+    src: "songs/First Class  Kalank  Varun Dhawan, Alia Bhatt, Kiara  Arijit Singh  Pritam Amitabh  Full Video.mp3",
+    imgSrc: "https://www.google.com/imgres?q=First%20Class%20Kalank%20Varun%20Dhawan%2C%20Alia%20Bhatt%2C%20Kiara%20Arijit%20Singh%20Pritam%20Amitabh%20Full%20Video&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5LOIEqNLNuY%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLCm08ozt75_LfxYcbIxEDKvkaBT4A&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D5LOIEqNLNuY&docid=UrAuv_kx0e5V0M&tbnid=1lA8CWLxpfwsVM&vet=12ahUKEwiFlMHp96uWAxVIlOEIHWz5ER0QnPAOegQIPRAA..i&w=686&h=386&hcb=2&ved=2ahUKEwiFlMHp96uWAxVIlOEIHWz5ER0QnPAOegQIPRAA",
     isLiked: false
   },
   {
     id: 104,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "'Aaj Ki Party' FULL VIDEO Song - Mika Singh Pritam  Salman Khan, Kareena Kapoor  Bajrangi Bhaijaan",
+    artist: "Salman Khan, Kareena Kapoor",
+    src: "songs/'Aaj Ki Party' FULL VIDEO Song - Mika Singh Pritam  Salman Khan, Kareena Kapoor  Bajrangi Bhaijaan.mp3",
+    imgSrc: "https://www.google.com/imgres?q=%27Aaj%20Ki%20Party%27%20FULL%20VIDEO%20Song%20-%20Mika%20Singh%20Pritam%20%20Salman%20Khan%2C%20Kareena%20Kapoor%20%20Bajrangi%20Bhaijaan&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fx4UjdNUjwoQ%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dx4UjdNUjwoQ&docid=GEchbgm5vAyNnM&tbnid=MKLpE_p_4fLDPM&vet=12ahUKEwiciuO2-KuWAxV5lOEIHRSOKoUQnPAOegQINhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiciuO2-KuWAxV5lOEIHRSOKoUQnPAOegQINhAA",
     isLiked: false
   },
   {
     id: 105,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Afghan Jalebi (Film Version) Lyrics  Phantom  Saif Ali Khan  Katrina Kaif  Pritam",
+    artist: "Saif Ali Khan  Katrina Kaif",
+    src: "songs/Afghan Jalebi (Film Version) Lyrics  Phantom  Saif Ali Khan  Katrina Kaif  Pritam.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Afghan%20Jalebi%20(Film%20Version)%20Lyrics%20%20Phantom%20%20Saif%20Ali%20Khan%20%20Katrina%20Kaif%20%20Pritam&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FuQ5JzXlioWQ%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DuQ5JzXlioWQ&docid=vosJSh0TCw2g3M&tbnid=5TdIZfJjaKY2lM&vet=12ahUKEwidq4Se-auWAxVHiuEIHbdwBxAQnPAOegQIPxAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwidq4Se-auWAxVHiuEIHbdwBxAQnPAOegQIPxAA",
     isLiked: false
   },
   {
     id: 106,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Bol Bachchan_ Chalao Na Naino Se (Lyrics)  Ajay Devgn, Asin  Himesh Reshammiya, Shreya Ghoshal",
+    artist: "Ajay Devgn, Asin  Himesh Reshammiya, Shreya Ghoshal",
+    src: "songs/Bol Bachchan_ Chalao Na Naino Se (Lyrics)  Ajay Devgn, Asin  Himesh Reshammiya, Shreya Ghoshal.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Bol%20Bachchan_%20Chalao%20Na%20Naino%20Se%20(Lyrics)%20%20Ajay%20Devgn%2C%20Asin%20%20Himesh%20Reshammiya%2C%20Shreya%20Ghoshal&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FqMYICPUKLf8%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DqMYICPUKLf8&docid=1LM7TrsME51GbM&tbnid=4CK2CkyT-nnhwM&vet=12ahUKEwit-Yn2-auWAxXln2MGHX-zInkQnPAOegQIRhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwit-Yn2-auWAxXln2MGHX-zInkQnPAOegQIRhAA",
     isLiked: false
   },
   {
