@@ -917,33 +917,161 @@ const songs = [
   },
   {
     id: 114,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Bom Diggy Diggy  (VIDEO)  Zack Knight  Jasmin Walia  Sonu Ke Titu Ki Sweety",
+    artist: "Zack Knight  Jasmin Walia  Sonu Ke Titu Ki Sweety",
+    src: "songs/Bom Diggy Diggy  (VIDEO)  Zack Knight  Jasmin Walia  Sonu Ke Titu Ki Sweety.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Bom%20Diggy%20Diggy%20%20(VIDEO)%20%20Zack%20Knight%20%20Jasmin%20Walia%20%20Sonu%20Ke%20Titu%20Ki%20Sweety&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FyIIGQB6EMAM%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DyIIGQB6EMAM&docid=KMxcfHPnTbhL7M&tbnid=_r5RELb6G50DyM&vet=12ahUKEwiIrsiej6yWAxXHkeEIHdxcENAQnPAOegQIQxAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiIrsiej6yWAxXHkeEIHdxcENAQnPAOegQIQxAA",
     isLiked: false
   },
   {
     id: 115,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Nainowale Ne Full Video Song  Padmaavat  Deepika Padukone  Shahid Kapoor  Ranveer Singh",
+    artist: "Deepika Padukone  Shahid Kapoor  Ranveer Singh",
+    src: "songs/Nainowale Ne Full Video Song  Padmaavat  Deepika Padukone  Shahid Kapoor  Ranveer Singh.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Nainowale%20Ne%20Full%20Video%20Song%20%20Padmaavat%20%20Deepika%20Padukone%20%20Shahid%20Kapoor%20%20Ranveer%20Singh&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FxE9FBL7jUGA%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DxE9FBL7jUGA&docid=UtHtuiTzcHbq7M&tbnid=1Rr9ltg2EErh8M&vet=12ahUKEwjt_ZurkKyWAxXxjeEIHTmWLYAQnPAOegQIPxAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjt_ZurkKyWAxXxjeEIHTmWLYAQnPAOegQIPxAA",
     isLiked: false
   },
   {
     id: 116,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Hangover Full Video Song  Kick  Salman Khan, Jacqueline Fernandez  Meet Bros Anjjan",
+    artist: "Salman Khan, Jacqueline Fernandez  Meet Bros Anjjan",
+    src: "songs/Hangover Full Video Song  Kick  Salman Khan, Jacqueline Fernandez  Meet Bros Anjjan.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Hangover%20Full%20Video%20Song%20%20Kick%20%20Salman%20Khan%2C%20Jacqueline%20Fernandez%20%20Meet%20Bros%20Anjjan&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1gqBb4Y7LJA%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D1gqBb4Y7LJA&docid=KH8BOpSM-WtFoM&tbnid=jmgoeGAJVCCTOM&vet=12ahUKEwjJz7OIkayWAxUhmeEIHcS9K5EQnPAOegQIPRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjJz7OIkayWAxUhmeEIHcS9K5EQnPAOegQIPRAA",
     isLiked: false
   },
   {
     id: 117,
+    title: "Devil-Yaar Naa Miley FULL VIDEO SONG  Salman Khan  Yo Yo Honey Singh  Kick",
+    artist: "Salman Khan",
+    src: "songs/Devil-Yaar Naa Miley FULL VIDEO SONG  Salman Khan  Yo Yo Honey Singh  Kick.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Devil-Yaar%20Naa%20Miley%20FULL%20VIDEO%20SONG%20%20Salman%20Khan%20%20Yo%20Yo%20Honey%20Singh%20%20Kick&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FiMmKHLFZn10%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DiMmKHLFZn10&docid=ZOmB26Sj1y-XvM&tbnid=ITvaTBgs3Js-wM&vet=12ahUKEwiFjbLckayWAxU3kuEIHUwtEsIQnPAOegQIPBAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiFjbLckayWAxU3kuEIHUwtEsIQnPAOegQIPBAA",
+    isLiked: false
+  },
+    {
+    id: 118,
     title: "",
     artist: "",
-    src: "s",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 119,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 120,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 121,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 122,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 123,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 124,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 125,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 126,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 127,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 128,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 129,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 130,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 131,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 132,
+    title: "",
+    artist: "",
+    src: "",
+    imgSrc: "",
+    isLiked: false
+  },
+    {
+    id: 133,
+    title: "",
+    artist: "",
+    src: "",
     imgSrc: "",
     isLiked: false
   },
