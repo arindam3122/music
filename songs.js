@@ -1013,10 +1013,10 @@ const songs = [
   },
     {
     id: 126,
-    title: "",
-    artist: "",
-    src: "",
-    imgSrc: "",
+    title: "Nadiya Godrume Bhajan by Golokanath Prabhu  ऐस आपन पहल कभ नह सन हग   YouTube पर पहल बर",
+    artist: "Golokanath Prabhu",
+    src: "songs/Nadiya Godrume Bhajan by Golokanath Prabhu  ऐस आपन पहल कभ नह सन हग   YouTube पर पहल बर.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Nadiya%20Godrume%20Bhajan%20by%20Goloknath%20Prabhu&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fl_4oSe-vGm8%2Fsddefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dl_4oSe-vGm8&docid=U1LF2DLhIdiEsM&tbnid=_QfhSEbVz16UxM&vet=12ahUKEwjl2YbIga2WAxUsi-EIHd6XPAUQnPAOegQIOxAA..i&w=640&h=480&hcb=2&ved=2ahUKEwjl2YbIga2WAxUsi-EIHd6XPAUQnPAOegQIOxAA",
     isLiked: false
   },
     {
