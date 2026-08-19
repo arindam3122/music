@@ -869,42 +869,42 @@ const songs = [
   },
   {
     id: 108,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Aaj Ki Raat  Stree 2  Tamannaah Bhatia  Sachin-Jigar  Madhubanti  Divya  Amitabh  15th August",
+    artist: "Madhubanti  Divya  Amitabh",
+    src: "songs/Aaj Ki Raat  Stree 2  Tamannaah Bhatia  Sachin-Jigar  Madhubanti  Divya  Amitabh  15th August.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Aaj%20Ki%20Raat%20Stree%202%20Tamannaah%20Bhatia%20Sachin-Jigar%20Madhubanti%20Divya%20Amitabh%2015th%20August&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Froz9sXFkTuE%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLBg91j7ebK5OK2dAO717BtCQTC03A&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Droz9sXFkTuE&docid=gGkX7s-rBS1cAM&tbnid=ecx-4nLwQno2pM&vet=12ahUKEwitgOTdiqyWAxWKmuEIHTnnG-YQnPAOegQINxAA..i&w=686&h=386&hcb=2&ved=2ahUKEwitgOTdiqyWAxWKmuEIHTnnG-YQnPAOegQINxAA",
     isLiked: false
   },
   {
     id: 109,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Uyi Amma - Azaad  Aaman Devgan, Rasha Thadani  Madhubanti Bagchi,Amit Trivedi,Amitabh Bhattacharya",
+    artist: "Rasha Thadani  Madhubanti Bagchi,Amit Trivedi,Amitabh Bhattacharya",
+    src: "songs/Uyi Amma - Azaad  Aaman Devgan, Rasha Thadani  Madhubanti Bagchi,Amit Trivedi,Amitabh Bhattacharya.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Uyi%20Amma%20-%20Azaad%20%20Aaman%20Devgan%2C%20Rasha%20Thadani%20%20Madhubanti%20Bagchi%2CAmit%20Trivedi%2CAmitabh%20Bhattacharya&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FFZLadzn5i6Q%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DFZLadzn5i6Q&docid=9vMYy3PLqgQ29M&tbnid=BVtp5hv-XuMooM&vet=12ahUKEwjPutfAi6yWAxUBm-EIHR9vHZ4QnPAOegQIPxAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjPutfAi6yWAxUBm-EIHR9vHZ4QnPAOegQIPxAA",
     isLiked: false
   },
   {
     id: 110,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Full Song_ O SAKI SAKI  Batla House  Nora Fatehi, Tanishk B,Neha K,Tulsi K, B Praak,Vishal-Shekhar",
+    artist: "Tanishk B,Neha K,Tulsi K, B Praak,Vishal-Shekhar",
+    src: "songs/Full Song_ O SAKI SAKI  Batla House  Nora Fatehi, Tanishk B,Neha K,Tulsi K, B Praak,Vishal-Shekhar.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Full%20Song_%20O%20SAKI%20SAKI%20%20Batla%20House%20%20Nora%20Fatehi%2C%20Tanishk%20B%2CNeha%20K%2CTulsi%20K%2C%20B%20Praak%2CVishal-Shekhar&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F_uUdJalMaF8%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_uUdJalMaF8&docid=4KkNZacicRs69M&tbnid=SA-gCGLIkw8YwM&vet=12ahUKEwiw78a0jKyWAxVDkuEIHR_oJucQnPAOegQIPRAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwiw78a0jKyWAxVDkuEIHR_oJucQnPAOegQIPRAA",
     isLiked: false
   },
   {
     id: 111,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "DILBAR Full Song  Satyameva Jayate  John Abraham Nora Fatehi  Tanishk B Neha Kakkar Ikka Dhvani",
+    artist: "John Abraham Nora Fatehi  Tanishk B Neha Kakkar Ikka Dhvani",
+    src: "songs/DILBAR Full Song  Satyameva Jayate  John Abraham Nora Fatehi  Tanishk B Neha Kakkar Ikka Dhvani.mp3",
+    imgSrc: "https://www.google.com/imgres?q=DILBAR%20Full%20Song%20%20Satyameva%20Jayate%20%20John%20Abraham%20Nora%20Fatehi%20%20Tanishk%20B%20Neha%20Kakkar%20Ikka%20Dhvani&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FJFcgOboQZ08%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DJFcgOboQZ08&docid=S9FWGkh9KH98yM&tbnid=y9oYD_EqYrVBSM&vet=12ahUKEwjdhvzujKyWAxXOm-EIHcGtMnAQnPAOegQIPhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjdhvzujKyWAxXOm-EIHcGtMnAQnPAOegQIPhAA",
     isLiked: false
   },
   {
     id: 112,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "Manike (Full Video)_ Thank God  Nora,Sidharth Tanishk,Yohani,Jubin,Surya R Rashmi ViragBhushan K",
+    artist: "Sidharth Tanishk,Yohani,Jubin,Surya R Rashmi ViragBhushan",
+    src: "songs/Manike (Full Video)_ Thank God  Nora,Sidharth Tanishk,Yohani,Jubin,Surya R Rashmi ViragBhushan K.mp3",
+    imgSrc: "https://www.google.com/imgres?q=Manike%20(Full%20Video)_%20Thank%20God%20%20Nora%2CSidharth%20Tanishk%2CYohani%2CJubin%2CSurya%20R%20Rashmi%20ViragBhushan%20K&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FP9Rx8Yvzb64%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLD7cfOe-XToCWBnZcLkJqYRIHexmg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DP9Rx8Yvzb64&docid=q3oRJXEWAk7IBM&tbnid=2odwWBYJg5k-TM&vet=12ahUKEwiL39aUjayWAxVWkeEIHbNNGfwQnPAOegQIRRAA..i&w=686&h=386&hcb=2&ved=2ahUKEwiL39aUjayWAxVWkeEIHbNNGfwQnPAOegQIRRAA",
     isLiked: false
   },
   {
