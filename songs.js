@@ -909,10 +909,10 @@ const songs = [
   },
   {
     id: 113,
-    title: "",
-    artist: "",
-    src: "s",
-    imgSrc: "",
+    title: "LAAL PARI (Song)_ Yo Yo Honey Singh  Sajid Nadiadwala  Tarun Mansukhani  Housefull 5 - 6th June",
+    artist: "Sajid Nadiadwala  Tarun Mansukhani",
+    src: "songs/LAAL PARI (Song)_ Yo Yo Honey Singh  Sajid Nadiadwala  Tarun Mansukhani  Housefull 5 - 6th June.mp3",
+    imgSrc: "https://www.google.com/imgres?q=LAAL%20PARI%20(Song)_%20Yo%20Yo%20Honey%20Singh%20%20Sajid%20Nadiadwala%20%20Tarun%20Mansukhani%20%20Housefull%205%20-%206th%20June&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FrcPuG_PkAf8%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DrcPuG_PkAf8&docid=hhYqRED1Ckbn4M&tbnid=QJnSRPh-HRB2sM&vet=12ahUKEwjOrZybjqyWAxVJmuEIHXTLLFMQnPAOegQIOhAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjOrZybjqyWAxVJmuEIHXTLLFMQnPAOegQIOhAA",
     isLiked: false
   },
   {
